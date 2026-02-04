@@ -62,42 +62,14 @@ $border-color: #e9ecef;
     }
 
     .logo-icon {
-      width: 32px;
-      height: 32px;
+      height: 40px;
+      width: auto;
       flex-shrink: 0;
-      display: flex;
-      align-items: center;
-      justify-content: center;
       transition: filter 0.3s ease;
-
-      circle {
-        opacity: 0.2;
-        transition: opacity 0.3s ease;
-      }
-
-      line, path, rect {
-        transition: all 0.3s ease;
-      }
     }
 
     &:hover .logo-icon {
-      filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
-
-      circle {
-        opacity: 0.8;
-        animation: pulse-ring 1.5s ease-in-out infinite;
-      }
-
-      line, path, rect {
-        stroke: #00a8cc;
-      }
-    }
-
-    .logo-text {
-      background: linear-gradient(135deg, $primary-color, $accent-color);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
-      background-clip: text;
+      filter: drop-shadow(0 0 8px rgba(0, 102, 204, 0.4));
     }
   }
 }
