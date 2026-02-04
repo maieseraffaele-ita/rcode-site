@@ -58,10 +58,10 @@ import { TranslationService } from '../../../core/services/translation.service';
 
           <!-- Legal Links -->
           <div class="footer-section">
-            <h4 class="footer-title">Legal</h4>
+            <h4 class="footer-title">{{ t('footer.legal') }}</h4>
             <ul class="footer-links">
-              <li><a routerLink="/privacy-policy">Privacy Policy</a></li>
-              <li><a routerLink="/cookie-policy">Cookie Policy</a></li>
+              <li><a routerLink="/privacy-policy">{{ t('footer.privacy') }}</a></li>
+              <li><a routerLink="/cookie-policy">{{ t('footer.cookies') }}</a></li>
               <li><a href="#">Terms of Service</a></li>
               <li><a href="#">GDPR Compliance</a></li>
               <li><a href="#">Cookie Preferences</a></li>
