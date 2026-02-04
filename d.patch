@@ -1,0 +1,16 @@
+Subject: [PATCH] d
+---
+Index: rcode-site/src/index.html
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/rcode-site/src/index.html b/rcode-site/src/index.html
+--- a/rcode-site/src/index.html	(revision 112daef853a5b4161cc0b79666b8e4e97368ceb7)
++++ b/rcode-site/src/index.html	(date 1770234904984)
+@@ -30,4 +30,4 @@
+   <app-root></app-root>
+   <noscript>Per utilizzare questo sito è necessario abilitare JavaScript.</noscript>
+ </body>
+-</html>
++</html>c
