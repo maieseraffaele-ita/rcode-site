@@ -1,6 +1,5 @@
 import { ApplicationConfig, provideBrowserGlobalErrorListeners } from '@angular/core';
 import { provideRouter, withInMemoryScrolling } from '@angular/router';
-import { provideMeta, provideTitle } from '@angular/platform-browser';
 
 import { routes } from './app.routes';
 
@@ -12,7 +11,7 @@ export const appConfig: ApplicationConfig = {
   providers: [
     // Error listeners globali
     provideBrowserGlobalErrorListeners(),
-    
+
     // Router con scroll smoothing
     provideRouter(
       routes,
@@ -20,12 +19,8 @@ export const appConfig: ApplicationConfig = {
         scrollPositionRestoration: 'enabled',
         anchorScrolling: 'enabled'
       })
-    ),
-    
-    // Meta tags provider per SEO
-    provideMeta(),
-    
-    // Title provider per SEO
-    provideTitle()
+    )
+
+    // Meta e Title services sono forniti di default da Angular per i componenti standalone
   ]
 };
