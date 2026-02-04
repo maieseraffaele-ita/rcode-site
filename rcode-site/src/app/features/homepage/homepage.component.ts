@@ -102,87 +102,69 @@ import { TranslationService } from '../../core/services/translation.service';
     <section class="services-overview">
       <div class="section-container">
         <div class="section-header">
-          <h2>I nostri servizi principali</h2>
-          <p>Soluzioni complete per la trasformazione digitale del tuo business</p>
+          <h2>{{ t('home.services_title') }}</h2>
+          <p>{{ t('home.services_subtitle') }}</p>
         </div>
 
         <div class="services-grid">
           <div class="service-card">
             <div class="service-icon">🔄</div>
-            <h3>Trasformazione Digitale</h3>
-            <p>
-              Ripensa i tuoi processi con tecnologie moderne. 
-              Dalla strategia all'implementazione, ti guidiamo in ogni fase.
-            </p>
+            <h3>{{ t('service.digital_transformation') }}</h3>
+            <p>{{ t('service.digital_transformation_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'digital-transformation'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
 
           <div class="service-card">
             <div class="service-icon">☁️</div>
-            <h3>Cloud & Infrastructure</h3>
-            <p>
-              Sfrutta la scalabilità del cloud. 
-              Migrazione, architettura e ottimizzazione dei costi.
-            </p>
+            <h3>{{ t('service.cloud') }}</h3>
+            <p>{{ t('service.cloud_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'cloud'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
 
           <div class="service-card">
             <div class="service-icon">🤖</div>
-            <h3>Artificial Intelligence & Data</h3>
-            <p>
-              Estrai valore dai tuoi dati con intelligenza artificiale. 
-              Machine Learning e analytics predittive.
-            </p>
+            <h3>{{ t('service.ai') }}</h3>
+            <p>{{ t('service.ai_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'ai'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
 
           <div class="service-card">
             <div class="service-icon">🔒</div>
-            <h3>Cybersecurity</h3>
-            <p>
-              Proteggi i tuoi asset digitali. 
-              Compliance, vulnerability assessment e threat protection.
-            </p>
+            <h3>{{ t('service.cybersecurity') }}</h3>
+            <p>{{ t('service.cybersecurity_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'cybersecurity'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
 
           <div class="service-card">
             <div class="service-icon">💻</div>
-            <h3>Application Development</h3>
-            <p>
-              Soluzioni software custom per le tue esigenze. 
-              Web, mobile e API enterprise-ready.
-            </p>
+            <h3>{{ t('service.development') }}</h3>
+            <p>{{ t('service.development_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'development'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
 
           <div class="service-card">
             <div class="service-icon">📊</div>
-            <h3>Consulting & Strategy</h3>
-            <p>
-              Allineamento tra IT e business. 
-              Roadmap tecnologico per accelerare la tua crescita.
-            </p>
+            <h3>{{ t('service.consulting') }}</h3>
+            <p>{{ t('service.consulting_desc') }}</p>
             <a routerLink="/servizi" [fragment]="'consulting'" class="service-link">
-              Scopri di più →
+              {{ t('service.learn_more') }}
             </a>
           </div>
         </div>
 
         <div class="services-cta">
           <a routerLink="/servizi" class="btn-primary">
-            Esplora tutti i servizi
+            {{ t('home.services_cta') }}
             <span class="arrow">→</span>
           </a>
         </div>
