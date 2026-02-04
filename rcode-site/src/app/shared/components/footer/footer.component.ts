@@ -20,11 +20,10 @@ import { TranslationService } from '../../../core/services/translation.service';
           <div class="footer-section footer-company">
             <div class="footer-brand">
               <span class="logo-icon">⚡</span>
-              <span class="logo-text">Innova Tech Solutions</span>
+              <span class="logo-text">rcode</span>
             </div>
             <p class="company-description">
-              Partner strategico per la trasformazione digitale delle tue aziende.
-              Innovazione, affidabilità e risultati misurabili.
+              {{ t('footer.company_description') }}
             </p>
             <div class="social-links">
               <a href="https://linkedin.com" target="_blank" rel="noopener" title="LinkedIn" class="social-link">in</a>
