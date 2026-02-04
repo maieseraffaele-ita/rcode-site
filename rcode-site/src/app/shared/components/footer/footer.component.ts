@@ -72,7 +72,7 @@ import { TranslationService } from '../../../core/services/translation.service';
         <!-- Footer Bottom -->
         <div class="footer-bottom">
           <div class="footer-copyright">
-            <p>&copy; {{ currentYear }} rcode. {{ t('footer.copyright') }}</p>
+            <p>&copy; {{ currentYear }} RCODE. {{ t('footer.copyright') }}</p>
           </div>
           <div class="footer-badges">
             <span class="badge">{{ t('footer.gdpr') }}</span>
