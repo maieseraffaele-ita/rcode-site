@@ -18,34 +18,33 @@ import { TranslationService } from '../../core/services/translation.service';
       <div class="hero-content">
         <div class="hero-text">
           <h1 class="hero-title">
-            Trasforma il tuo business
-            <span class="gradient-text">con la giusta tecnologia</span>
+            {{ t('home.hero_title') }}
+            <span class="gradient-text">{{ t('home.hero_title_gradient') }}</span>
           </h1>
           <p class="hero-subtitle">
-            Partner strategico per la trasformazione digitale. Combiniamo competenza tecnologica, 
-            innovazione e risultati misurabili per accelerare la crescita della tua azienda.
+            {{ t('home.hero_subtitle') }}
           </p>
           <div class="hero-cta">
             <a routerLink="/contatti" class="btn-primary">
-              Richiedi una consulenza gratuita
+              {{ t('home.hero_cta_primary') }}
               <span class="arrow">→</span>
             </a>
             <a routerLink="/chi-siamo" class="btn-secondary">
-              Scopri di più su di noi
+              {{ t('home.hero_cta_secondary') }}
             </a>
           </div>
           <div class="hero-stats">
             <div class="stat">
-              <div class="stat-number">500+</div>
-              <div class="stat-label">Progetti completati</div>
+              <div class="stat-number">{{ t('home.hero_stat_1') }}</div>
+              <div class="stat-label">{{ t('home.hero_stat_1_label') }}</div>
             </div>
             <div class="stat">
-              <div class="stat-number">15+</div>
-              <div class="stat-label">Anni di esperienza</div>
+              <div class="stat-number">{{ t('home.hero_stat_2') }}</div>
+              <div class="stat-label">{{ t('home.hero_stat_2_label') }}</div>
             </div>
             <div class="stat">
-              <div class="stat-number">98%</div>
-              <div class="stat-label">Client satisfaction</div>
+              <div class="stat-number">{{ t('home.hero_stat_3') }}</div>
+              <div class="stat-label">{{ t('home.hero_stat_3_label') }}</div>
             </div>
           </div>
         </div>
