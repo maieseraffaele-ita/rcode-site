@@ -175,8 +175,8 @@ import { TranslationService } from '../../core/services/translation.service';
     <section class="industries-preview">
       <div class="section-container">
         <div class="section-header">
-          <h2>Soluzioni per ogni industria</h2>
-          <p>Expertise verticale in settori mission-critical</p>
+          <h2>{{ t('home.industries_title') }}</h2>
+          <p>{{ t('home.industries_subtitle') }}</p>
         </div>
 
         <div class="industries-grid">
@@ -209,7 +209,7 @@ import { TranslationService } from '../../core/services/translation.service';
 
         <div class="industries-cta">
           <a routerLink="/industrie" class="btn-primary">
-            Scopri le soluzioni per industria
+            {{ t('home.industries_cta') }}
             <span class="arrow">→</span>
           </a>
         </div>
@@ -220,13 +220,10 @@ import { TranslationService } from '../../core/services/translation.service';
     <section class="final-cta">
       <div class="section-container">
         <div class="cta-content">
-          <h2>Pronto a trasformare il tuo business?</h2>
-          <p>
-            Contattaci oggi per una consulenza strategica gratuita. 
-            Scopri come possiamo accelerare la tua trasformazione digitale.
-          </p>
+          <h2>{{ t('home.final_cta_title') }}</h2>
+          <p>{{ t('home.final_cta_subtitle') }}</p>
           <a routerLink="/contatti" class="btn-primary btn-large">
-            Richiedi una consulenza
+            {{ t('home.final_cta_button') }}
             <span class="arrow">→</span>
           </a>
         </div>
