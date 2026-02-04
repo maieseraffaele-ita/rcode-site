@@ -1,10 +1,11 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink, RouterLinkActive } from '@angular/router';
+import { TranslationService, type Language } from '../../../core/services/translation.service';
 
 /**
  * Componente Header principale
- * Contiene logo, navigazione principale, CTA e menu mobile
+ * Contiene logo, navigazione principale, language selector e tasto join team
  */
 @Component({
   selector: 'app-header',
@@ -17,36 +18,47 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
         <div class="header-brand">
           <a routerLink="/" class="logo">
             <span class="logo-icon">⚡</span>
-            <span class="logo-text">Innova Tech</span>
+            <span class="logo-text">rcode</span>
           </a>
         </div>
 
         <!-- Navigazione Desktop -->
         <nav class="nav-desktop">
           <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-link">
-            Home
+            {{ t('nav.home') }}
           </a>
           <a routerLink="/chi-siamo" routerLinkActive="active" class="nav-link">
-            Chi Siamo
+            {{ t('nav.about') }}
           </a>
           <a routerLink="/servizi" routerLinkActive="active" class="nav-link">
-            Servizi
+            {{ t('nav.services') }}
           </a>
           <a routerLink="/industrie" routerLinkActive="active" class="nav-link">
-            Industrie
-          </a>
-          <a routerLink="/lavora-con-noi" routerLinkActive="active" class="nav-link">
-            Carriera
+            {{ t('nav.industries') }}
           </a>
           <a routerLink="/contatti" routerLinkActive="active" class="nav-link">
-            Contatti
+            {{ t('nav.contact') }}
+          </a>
+          <a routerLink="/privacy-policy" routerLinkActive="active" class="nav-link">
+            {{ t('nav.request_consultation') }}
           </a>
         </nav>
 
-        <!-- CTA Button -->
-        <div class="header-cta">
-          <a routerLink="/contatti" class="btn-primary">
-            Richiedi Consulenza
+        <!-- Right Section: Language Selector + CTA Button -->
+        <div class="header-right">
+          <!-- Language Selector -->
+          <div class="language-selector">
+            <select [value]="currentLanguage()" (change)="onLanguageChange($event)" class="language-dropdown">
+              <option value="it">{{ t('language.italian') }}</option>
+              <option value="en">{{ t('language.english') }}</option>
+              <option value="de">{{ t('language.german') }}</option>
+            </select>
+            <span class="language-icon">🌐</span>
+          </div>
+
+          <!-- Join Team Button -->
+          <a routerLink="/lavora-con-noi" class="btn-primary">
+            {{ t('nav.join_team') }}
           </a>
         </div>
 
@@ -61,26 +73,37 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
       <!-- Mobile Navigation -->
       <nav class="nav-mobile" *ngIf="mobileMenuOpen()">
         <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Home
+          {{ t('nav.home') }}
         </a>
         <a routerLink="/chi-siamo" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Chi Siamo
+          {{ t('nav.about') }}
         </a>
         <a routerLink="/servizi" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Servizi
+          {{ t('nav.services') }}
         </a>
         <a routerLink="/industrie" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Industrie
-        </a>
-        <a routerLink="/lavora-con-noi" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Carriera
+          {{ t('nav.industries') }}
         </a>
         <a routerLink="/contatti" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
-          Contatti
+          {{ t('nav.contact') }}
         </a>
-        <a routerLink="/contatti" class="btn-primary-mobile" (click)="closeMobileMenu()">
-          Richiedi Consulenza
+        <a routerLink="/privacy-policy" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
+          {{ t('nav.request_consultation') }}
         </a>
+        
+        <div class="mobile-bottom-section">
+          <div class="mobile-language-selector">
+            <label>{{ t('language.english') }}:</label>
+            <select [value]="currentLanguage()" (change)="onLanguageChange($event)" class="language-dropdown">
+              <option value="it">{{ t('language.italian') }}</option>
+              <option value="en">{{ t('language.english') }}</option>
+              <option value="de">{{ t('language.german') }}</option>
+            </select>
+          </div>
+          <a routerLink="/lavora-con-noi" class="btn-primary-mobile" (click)="closeMobileMenu()">
+            {{ t('nav.join_team') }}
+          </a>
+        </div>
       </nav>
     </header>
   `,
@@ -90,14 +113,34 @@ export class HeaderComponent {
   // Segnali per lo stato del menu mobile e scroll
   mobileMenuOpen = signal<boolean>(false);
   isScrolled = signal<boolean>(false);
+  currentLanguage = signal<Language>('it');
 
-  constructor() {
+  constructor(private translationService: TranslationService) {
+    this.currentLanguage.set(this.translationService.getLanguage());
+    
     // Listener per il scroll
     if (typeof window !== 'undefined') {
       window.addEventListener('scroll', () => {
         this.isScrolled.set(window.scrollY > 50);
       });
     }
+  }
+
+  /**
+   * Traduce una chiave
+   */
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
+
+  /**
+   * Cambia la lingua
+   */
+  onLanguageChange(event: Event): void {
+    const target = event.target as HTMLSelectElement;
+    const language = target.value as Language;
+    this.translationService.setLanguage(language);
+    this.currentLanguage.set(language);
   }
 
   /**
