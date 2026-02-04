@@ -23,9 +23,9 @@ import { MetaService } from '../../core/services/meta.service';
 
           <h2>2. Titolare del Trattamento</h2>
           <p>
-            <strong>Innova Tech Solutions S.p.A.</strong><br>
+            <strong>RCODE S.p.A.</strong><br>
             Via Innovazione 42, 20100 Milano (MI)<br>
-            Email: <a href="mailto:privacy@innovatetech.it">privacy@innovatetech.it</a><br>
+            Email: <a href="mailto:privacy@rcode.it">privacy@rcode.it</a><br>
             Partita IVA: IT12345678910
           </p>
 
