@@ -118,7 +118,7 @@ $border-color: #e9ecef;
 
     &.active {
       color: $accent-color;
-      background-color: rgba(0, 212, 255, 0.1);
+      background-color: rgba(0, 102, 204, 0.1);
 
       &::after {
         width: 100%;
@@ -265,14 +265,14 @@ $border-color: #e9ecef;
     display: block;
 
     &:hover {
-      background-color: rgba(0, 212, 255, 0.1);
+      background-color: rgba(0, 102, 204, 0.1);
       border-left-color: $accent-color;
       color: $accent-color;
       padding-left: 2.5rem;
     }
 
     &.active {
-      background-color: rgba(0, 212, 255, 0.1);
+      background-color: rgba(0, 102, 204, 0.1);
       border-left-color: $accent-color;
       color: $accent-color;
     }
