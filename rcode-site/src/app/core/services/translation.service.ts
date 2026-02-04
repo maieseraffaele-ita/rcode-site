@@ -112,7 +112,7 @@ export class TranslationService {
       'careers.cta_title': 'Non hai trovato la posizione giusta?',
       'careers.cta_subtitle': 'Inviaci il tuo CV per opportunità future',
       'careers.view_offers': 'Vedi le nostre offerte',
-      'careers.join_us': 'Unisciti a rcode',
+      'careers.join_us': 'Unisciti a RCODE',
       
       // Contact Page
       'contact.hero_title': 'Contattaci',
@@ -177,7 +177,7 @@ export class TranslationService {
       'home.hero_stat_3_label': 'Client satisfaction',
       
       // Value Proposition
-      'home.vp_title': 'Why choose rcode?',
+      'home.vp_title': 'Why choose RCODE?',
       'home.vp_subtitle': 'Three pillars that guide our strategic approach',
       'home.vp_card_1_title': 'Measurable Results',
       'home.vp_card_1_text': 'Every project is structured with clear KPIs and traceable ROI. We don\'t just offer solutions: we offer quantifiable growth.',
@@ -245,7 +245,7 @@ export class TranslationService {
       'careers.cta_title': 'Haven\'t found the right position?',
       'careers.cta_subtitle': 'Send us your CV for future opportunities',
       'careers.view_offers': 'View our offers',
-      'careers.join_us': 'Join rcode',
+      'careers.join_us': 'Join RCODE',
       
       // Contact Page
       'contact.hero_title': 'Contact Us',
@@ -310,7 +310,7 @@ export class TranslationService {
       'home.hero_stat_3_label': 'Kundenzufriedenheit',
       
       // Value Proposition
-      'home.vp_title': 'Warum rcode wählen?',
+      'home.vp_title': 'Warum RCODE wählen?',
       'home.vp_subtitle': 'Drei Säulen, die unseren strategischen Ansatz leiten',
       'home.vp_card_1_title': 'Messbare Ergebnisse',
       'home.vp_card_1_text': 'Jedes Projekt ist mit klaren KPIs und nachverfolgbarem ROI strukturiert. Wir bieten nicht nur Lösungen: wir bieten quantifizierbares Wachstum.',
@@ -378,7 +378,7 @@ export class TranslationService {
       'careers.cta_title': 'Haben Sie die richtige Position nicht gefunden?',
       'careers.cta_subtitle': 'Senden Sie uns Ihren Lebenslauf für zukünftige Möglichkeiten',
       'careers.view_offers': 'Unsere Angebote sehen',
-      'careers.join_us': 'rcode beitreten',
+      'careers.join_us': 'RCODE beitreten',
       
       // Contact Page
       'contact.hero_title': 'Kontaktieren Sie uns',
