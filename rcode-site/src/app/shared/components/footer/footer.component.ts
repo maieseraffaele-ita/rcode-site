@@ -72,12 +72,12 @@ import { TranslationService } from '../../../core/services/translation.service';
         <!-- Footer Bottom -->
         <div class="footer-bottom">
           <div class="footer-copyright">
-            <p>&copy; {{ currentYear }} Innova Tech Solutions. Tutti i diritti riservati.</p>
+            <p>&copy; {{ currentYear }} rcode. {{ t('footer.copyright') }}</p>
           </div>
           <div class="footer-badges">
-            <span class="badge">GDPR Compliant</span>
-            <span class="badge">ISO 27001</span>
-            <span class="badge">Enterprise Ready</span>
+            <span class="badge">{{ t('footer.gdpr') }}</span>
+            <span class="badge">{{ t('footer.iso') }}</span>
+            <span class="badge">{{ t('footer.enterprise') }}</span>
           </div>
         </div>
       </div>
