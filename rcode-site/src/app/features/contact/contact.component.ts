@@ -14,8 +14,8 @@ import { takeUntil } from 'rxjs/operators';
   template: `
     <section class="contact-hero">
       <div class="container">
-        <h1>Contattaci</h1>
-        <p>Parliamo della tua trasformazione digitale</p>
+        <h1>{{ t('contact.hero_title') }}</h1>
+        <p>{{ t('contact.hero_subtitle') }}</p>
       </div>
     </section>
 
@@ -24,92 +24,92 @@ import { takeUntil } from 'rxjs/operators';
         <div class="contact-grid">
           <!-- Contact Form -->
           <div class="contact-form-wrapper">
-            <h2>Inviaci un messaggio</h2>
+            <h2>{{ t('contact.form_title') }}</h2>
             <form (ngSubmit)="onSubmit()" class="contact-form">
               <div class="form-group">
-                <label for="name">Nome completo *</label>
-                <input 
-                  type="text" 
-                  id="name" 
+                <label for="name">{{ t('contact.form_name') }} *</label>
+                <input
+                  type="text"
+                  id="name"
                   [(ngModel)]="formData.name"
                   name="name"
-                  required 
-                  placeholder="Mario Rossi"
+                  required
+                  [placeholder]="t('contact.form_name')"
                 >
               </div>
 
               <div class="form-group">
-                <label for="email">Email *</label>
-                <input 
-                  type="email" 
-                  id="email" 
+                <label for="email">{{ t('contact.form_email') }} *</label>
+                <input
+                  type="email"
+                  id="email"
                   [(ngModel)]="formData.email"
                   name="email"
-                  required 
-                  placeholder="mario@azienda.it"
+                  required
+                  [placeholder]="t('contact.form_email')"
                 >
               </div>
 
               <div class="form-group">
-                <label for="company">Azienda *</label>
-                <input 
-                  type="text" 
-                  id="company" 
+                <label for="company">{{ t('contact.form_company') }} *</label>
+                <input
+                  type="text"
+                  id="company"
                   [(ngModel)]="formData.company"
                   name="company"
-                  required 
-                  placeholder="Tua Azienda SpA"
+                  required
+                  [placeholder]="t('contact.form_company')"
                 >
               </div>
 
               <div class="form-group">
-                <label for="service">Servizio di interesse *</label>
-                <select 
-                  id="service" 
+                <label for="service">{{ t('contact.form_service') }} *</label>
+                <select
+                  id="service"
                   [(ngModel)]="formData.service"
                   name="service"
                   required
                 >
-                  <option value="">Seleziona un servizio</option>
-                  <option value="digital-transformation">Trasformazione Digitale</option>
-                  <option value="cloud">Cloud & Infrastructure</option>
-                  <option value="ai">AI & Data</option>
-                  <option value="cybersecurity">Cybersecurity</option>
-                  <option value="development">Application Development</option>
-                  <option value="consulting">Consulting & Strategy</option>
-                  <option value="other">Altro</option>
+                  <option value="">{{ t('contact.form_service_select') }}</option>
+                  <option value="digital-transformation">{{ t('service.digital_transformation') }}</option>
+                  <option value="cloud">{{ t('service.cloud') }}</option>
+                  <option value="ai">{{ t('service.ai') }}</option>
+                  <option value="cybersecurity">{{ t('service.cybersecurity') }}</option>
+                  <option value="development">{{ t('service.development') }}</option>
+                  <option value="consulting">{{ t('service.consulting') }}</option>
+                  <option value="other">{{ t('contact.form_service_other') }}</option>
                 </select>
               </div>
 
               <div class="form-group">
-                <label for="message">Messaggio *</label>
-                <textarea 
-                  id="message" 
+                <label for="message">{{ t('contact.form_message') }} *</label>
+                <textarea
+                  id="message"
                   [(ngModel)]="formData.message"
                   name="message"
                   rows="5"
-                  required 
-                  placeholder="Descrivi brevemente il tuo progetto e le tue esigenze..."
+                  required
+                  [placeholder]="t('contact.form_message_placeholder')"
                 ></textarea>
               </div>
 
               <div class="form-group checkbox">
-                <input 
-                  type="checkbox" 
-                  id="gdpr" 
+                <input
+                  type="checkbox"
+                  id="gdpr"
                   [(ngModel)]="formData.gdpr"
                   name="gdpr"
                   required
                 >
-                <label for="gdpr">Ho letto e accetto la <a href="/privacy-policy">Privacy Policy</a> *</label>
+                <label for="gdpr">{{ t('contact.form_gdpr') }} <a href="/privacy-policy">{{ t('footer.privacy') }}</a> *</label>
               </div>
 
               <button type="submit" class="btn-primary" [disabled]="isSubmitting()">
-                {{ isSubmitting() ? 'Invio in corso...' : 'Invia Messaggio' }}
+                {{ isSubmitting() ? t('contact.form_submitting') : t('contact.form_submit') }}
               </button>
 
               <div *ngIf="submitSuccess()" class="success-message">
-                ✓ Messaggio inviato con successo! Ti contatteremo presto.
+                {{ t('contact.form_success') }}
               </div>
             </form>
           </div>
@@ -117,7 +117,7 @@ import { takeUntil } from 'rxjs/operators';
           <!-- Contact Information -->
           <div class="contact-info">
             <div class="info-card">
-              <h3>Sede Principale</h3>
+              <h3>{{ t('contact.headquarters') }}</h3>
               <p>
                 <strong>Milano</strong><br>
                 Via Innovazione 42<br>
@@ -127,7 +127,7 @@ import { takeUntil } from 'rxjs/operators';
             </div>
 
             <div class="info-card">
-              <h3>Ufficio Roma</h3>
+              <h3>{{ t('contact.office_rome') }}</h3>
               <p>
                 <strong>Roma</strong><br>
                 Via della Tecnologia 15<br>
@@ -137,19 +137,19 @@ import { takeUntil } from 'rxjs/operators';
             </div>
 
             <div class="info-card">
-              <h3>Email</h3>
+              <h3>{{ t('contact.email') }}</h3>
               <p>
-                <strong>Info generali:</strong><br>
-                <a href="mailto:info@innovatetech.it">info@innovatetech.it</a><br><br>
-                <strong>Vendite:</strong><br>
-                <a href="mailto:sales@innovatetech.it">sales@innovatetech.it</a><br><br>
-                <strong>Supporto:</strong><br>
-                <a href="mailto:support@innovatetech.it">support@innovatetech.it</a>
+                <strong>{{ t('contact.email_general') }}</strong><br>
+                <a href="mailto:info@rcode.it">info@rcode.it</a><br><br>
+                <strong>{{ t('contact.email_sales') }}</strong><br>
+                <a href="mailto:sales@rcode.it">sales@rcode.it</a><br><br>
+                <strong>{{ t('contact.email_support') }}</strong><br>
+                <a href="mailto:support@rcode.it">support@rcode.it</a>
               </p>
             </div>
 
             <div class="info-card">
-              <h3>Social Media</h3>
+              <h3>{{ t('contact.social') }}</h3>
               <div class="social-links">
                 <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
                 <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
@@ -158,12 +158,12 @@ import { takeUntil } from 'rxjs/operators';
             </div>
 
             <div class="office-hours">
-              <h3>Orari di ufficio</h3>
+              <h3>{{ t('contact.office_hours') }}</h3>
               <p>
-                Lunedì - Venerdì: 9:00 - 18:00<br>
-                Sabato - Domenica: Chiuso<br>
+                {{ t('contact.office_hours_weekday') }}<br>
+                {{ t('contact.office_hours_weekend') }}<br>
                 <br>
-                <em>Risponderemo a tutte le richieste entro 24 ore lavorative</em>
+                <em>{{ t('contact.office_hours_response') }}</em>
               </p>
             </div>
           </div>
@@ -174,9 +174,9 @@ import { takeUntil } from 'rxjs/operators';
     <!-- Map Section (placeholder) -->
     <section class="contact-map">
       <div class="container">
-        <h2>Trovaci</h2>
+        <h2>{{ t('contact.location_finder') }}</h2>
         <div class="map-placeholder">
-          <p>Mappa interattiva con le nostre sedi</p>
+          <p>{{ t('contact.location_map_description') }}</p>
         </div>
       </div>
     </section>
@@ -199,7 +199,7 @@ export class ContactComponent implements OnInit, OnDestroy {
 
   constructor(
     private metaService: MetaService,
-    private translationService: TranslationService,
+    protected translationService: TranslationService,
     private cdr: ChangeDetectorRef
   ) {
     this.translationService.onLanguageChange()
@@ -218,9 +218,16 @@ export class ContactComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  /**
+   * Metodo helper per accedere alle traduzioni nel template
+   */
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
+
   onSubmit(): void {
     if (!this.isFormValid()) {
-      alert('Per favore completa tutti i campi obbligatori');
+      alert(this.t('contact.form_validation_error'));
       return;
     }
 
@@ -231,10 +238,10 @@ export class ContactComponent implements OnInit, OnDestroy {
       console.log('Form submitted:', this.formData);
       this.isSubmitting.set(false);
       this.submitSuccess.set(true);
-      
+
       // Reset form
       this.resetForm();
-      
+
       // Nascondi il messaggio di successo dopo 5 secondi
       setTimeout(() => {
         this.submitSuccess.set(false);
