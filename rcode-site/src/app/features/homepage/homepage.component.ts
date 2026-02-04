@@ -72,36 +72,27 @@ import { TranslationService } from '../../core/services/translation.service';
     <section class="value-proposition">
       <div class="section-container">
         <div class="section-header">
-          <h2>Perché scegliere Innova Tech Solutions?</h2>
-          <p>Tre pilastri che guidano il nostro approccio strategico</p>
+          <h2>{{ t('home.vp_title') }}</h2>
+          <p>{{ t('home.vp_subtitle') }}</p>
         </div>
 
         <div class="value-grid">
           <div class="value-card">
             <div class="value-icon">🎯</div>
-            <h3>Risultati Misurabili</h3>
-            <p>
-              Ogni progetto è strutturato con KPI chiari e ROI tracciabile. 
-              Non proponiamo solo soluzioni: proponiamo crescita quantificabile.
-            </p>
+            <h3>{{ t('home.vp_card_1_title') }}</h3>
+            <p>{{ t('home.vp_card_1_text') }}</p>
           </div>
 
           <div class="value-card">
             <div class="value-icon">🔧</div>
-            <h3>Competenza Tecnica</h3>
-            <p>
-              Team di esperti certificati con expertise in cloud, AI, cybersecurity 
-              e sviluppo applicazioni enterprise.
-            </p>
+            <h3>{{ t('home.vp_card_2_title') }}</h3>
+            <p>{{ t('home.vp_card_2_text') }}</p>
           </div>
 
           <div class="value-card">
             <div class="value-icon">🚀</div>
-            <h3>Innovazione Continua</h3>
-            <p>
-              Rimaniamo sempre ai vertici delle nuove tecnologie. 
-              La trasformazione digitale non è una destinazione, è un percorso.
-            </p>
+            <h3>{{ t('home.vp_card_3_title') }}</h3>
+            <p>{{ t('home.vp_card_3_text') }}</p>
           </div>
         </div>
       </div>
