@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
+import { TranslationService } from '../../../core/services/translation.service';
 
 /**
  * Componente Footer
