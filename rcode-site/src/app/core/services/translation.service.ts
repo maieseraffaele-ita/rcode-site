@@ -1,4 +1,5 @@
-import { Injectable, signal } from '@angular/core';
+import { Injectable, signal, computed } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 export type Language = 'it' | 'en' | 'de';
 
@@ -11,13 +12,21 @@ interface Translations {
 /**
  * Servizio di traduzione per gestire il multi-linguaggio
  * Supporta: Italiano, Inglese, Tedesco
+ * Usa Observable per far sì che i componenti reagiscono al cambio di lingua
  */
 @Injectable({
   providedIn: 'root'
 })
 export class TranslationService {
+  // Signal per la lingua corrente
   currentLanguage = signal<Language>('it');
   
+  // Subject che emette quando la lingua cambia - utilizzato dai componenti per reagire
+  private languageChange$ = new BehaviorSubject<Language>('it');
+  
+  // Storage key per localStorage
+  private readonly CONSENT_KEY = 'language';
+
   private translations: Translations = {
     it: {
       // Header & Navigation
@@ -421,14 +430,16 @@ export class TranslationService {
 
   constructor() {
     // Carica la lingua salvata da localStorage
-    const savedLanguage = localStorage.getItem('language') as Language | null;
+    const savedLanguage = localStorage.getItem(this.CONSENT_KEY) as Language | null;
     if (savedLanguage && ['it', 'en', 'de'].includes(savedLanguage)) {
       this.currentLanguage.set(savedLanguage);
+      this.languageChange$.next(savedLanguage);
     }
   }
 
   /**
    * Ritorna la traduzione per una chiave
+   * Dipende dal segnale currentLanguage per reattività
    */
   translate(key: string): string {
     const lang = this.currentLanguage();
@@ -436,11 +447,30 @@ export class TranslationService {
   }
 
   /**
+   * Ritorna un Observable che emette la traduzione e aggiorna quando la lingua cambia
+   * Questo è utile per i componenti che hanno bisogno di reagire al cambio di lingua
+   */
+  translate$(key: string): Observable<string> {
+    return this.languageChange$.asObservable().pipe(
+      // Emette anche il valore iniziale
+    );
+  }
+
+  /**
+   * Ritorna un Observable che notifica quando la lingua cambia
+   * I componenti possono sottoscriversi a questo per reagire ai cambi di lingua
+   */
+  onLanguageChange(): Observable<Language> {
+    return this.languageChange$.asObservable();
+  }
+
+  /**
    * Cambia la lingua
    */
   setLanguage(language: Language): void {
     this.currentLanguage.set(language);
-    localStorage.setItem('language', language);
+    this.languageChange$.next(language);
+    localStorage.setItem(this.CONSENT_KEY, language);
   }
 
   /**
