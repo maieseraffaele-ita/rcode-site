@@ -27,7 +27,7 @@ import { MetaService } from '../../core/services/meta.service';
           <div class="story-text">
             <h2>La nostra storia</h2>
             <p>
-              Innova Tech Solutions nasce nel 2009 da una visione semplice ma potente: 
+              RCODE nasce nel 2009 da una visione semplice ma potente:
               trasformare il modo in cui le aziende utilizzano la tecnologia per crescere.
             </p>
             <p>
