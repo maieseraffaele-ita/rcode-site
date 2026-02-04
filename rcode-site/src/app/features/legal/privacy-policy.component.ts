@@ -133,8 +133,8 @@ import { MetaService } from '../../core/services/meta.service';
           <p>
             Per domande sulla nostra Privacy Policy, contatta:<br><br>
             <strong>Data Protection Officer (DPO)</strong><br>
-            Innova Tech Solutions<br>
-            Email: <a href="mailto:dpo@innovatetech.it">dpo@innovatetech.it</a><br><br>
+            RCODE<br>
+            Email: <a href="mailto:dpo@rcode.it">dpo@rcode.it</a><br><br>
             <strong>Autorità Competente (Garante della Privacy)</strong><br>
             Garante per la Protezione dei Dati Personali<br>
             Piazza di Monte Citorio, 121, 00186 Roma<br>
