@@ -1,12 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { MetaService } from '../../core/services/meta.service';
+import { TranslationService } from '../../core/services/translation.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 @Component({
   selector: 'app-careers',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <section class="careers-hero">
       <div class="container">
@@ -163,10 +167,27 @@ import { MetaService } from '../../core/services/meta.service';
   `,
   styleUrl: './careers.component.scss'
 })
-export class CareersComponent implements OnInit {
-  constructor(private metaService: MetaService) {}
-  
+export class CareersComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+
+  constructor(
+    private metaService: MetaService,
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    this.translationService.onLanguageChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
+
   ngOnInit(): void {
     this.metaService.setCareersPageMeta();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
