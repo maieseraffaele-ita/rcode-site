@@ -74,17 +74,6 @@ $border-color: #e9ecef;
   }
 }
 
-@keyframes pulse-ring {
-  0%, 100% {
-    r: 18px;
-    opacity: 0.2;
-  }
-  50% {
-    r: 22px;
-    opacity: 0.05;
-  }
-}
-
 // Navigazione Desktop
 .nav-desktop {
   display: flex;
