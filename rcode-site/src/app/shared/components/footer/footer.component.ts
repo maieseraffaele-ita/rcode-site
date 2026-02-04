@@ -88,4 +88,13 @@ import { TranslationService } from '../../../core/services/translation.service';
 })
 export class FooterComponent {
   currentYear = new Date().getFullYear();
+
+  constructor(protected translationService: TranslationService) {}
+
+  /**
+   * Metodo helper per accedere alle traduzioni nel template
+   */
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
 }
