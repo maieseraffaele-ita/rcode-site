@@ -20,7 +20,7 @@ import { TranslationService } from '../../../core/services/translation.service';
           <div class="footer-section footer-company">
             <div class="footer-brand">
               <span class="logo-icon">⚡</span>
-              <span class="logo-text">rcode</span>
+              <span class="logo-text">RCODE</span>
             </div>
             <p class="company-description">
               {{ t('footer.company_description') }}
