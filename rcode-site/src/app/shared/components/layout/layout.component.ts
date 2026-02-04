@@ -4,7 +4,7 @@ import { RouterOutlet } from '@angular/router';
 import { HeaderComponent } from '../header/header.component';
 import { FooterComponent } from '../footer/footer.component';
 import { CookieBannerComponent } from '../cookie-banner/cookie-banner.component';
-import { CookieConsentService } from '../../core/services/cookie-consent.service';
+import { CookieConsentService } from '../../../core/services/cookie-consent.service';
 
 /**
  * Componente Layout principale
