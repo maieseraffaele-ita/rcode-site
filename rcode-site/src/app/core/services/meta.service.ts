@@ -29,7 +29,7 @@ export class MetaService {
     url?: string;
   }): void {
     // Imposta il title
-    this.titleService.setTitle(`${config.title} | Innova Tech Solutions`);
+    this.titleService.setTitle(`${config.title} | RCODE`);
 
     // Imposta la description
     this.updateMetaTag('description', config.description);
@@ -74,7 +74,7 @@ export class MetaService {
    */
   setAboutPageMeta(): void {
     this.setMetaTags({
-      title: 'Chi Siamo | Innova Tech Solutions',
+      title: 'Chi Siamo | RCODE',
       description: 'Scopri la nostra storia, mission e valori. Innova Tech Solutions è un leader nel settore della consulenza tecnologica.',
       keywords: 'chi siamo, about us, consulenza tecnologica, innova tech',
       url: `${this.siteUrl}/chi-siamo`
@@ -86,7 +86,7 @@ export class MetaService {
    */
   setServicesPageMeta(): void {
     this.setMetaTags({
-      title: 'Servizi di Consulenza | Innova Tech Solutions',
+      title: 'Servizi di Consulenza | RCODE',
       description: 'Soluzioni complete in trasformazione digitale, cloud, AI, cybersecurity e sviluppo applicazioni.',
       keywords: 'servizi consulenza, cloud computing, AI, cybersecurity, application development',
       url: `${this.siteUrl}/servizi`
@@ -98,7 +98,7 @@ export class MetaService {
    */
   setIndustriesPageMeta(): void {
     this.setMetaTags({
-      title: 'Soluzioni per Industria | Innova Tech Solutions',
+      title: 'Soluzioni per Industria | RCODE',
       description: 'Soluzioni verticali per Finance, Healthcare, Manufacturing, Pubblica Amministrazione e Retail.',
       keywords: 'soluzioni industria, finance, healthcare, manufacturing, pubblica amministrazione',
       url: `${this.siteUrl}/industrie`
@@ -110,7 +110,7 @@ export class MetaService {
    */
   setCareersPageMeta(): void {
     this.setMetaTags({
-      title: 'Lavora Con Noi | Innova Tech Solutions',
+      title: 'Lavora Con Noi | RCODE',
       description: 'Unisciti a un team di talenti. Scopri le opportunità di carriera e la nostra cultura aziendale.',
       keywords: 'carriera, lavoro, talenti, culture, innovation, tech jobs',
       url: `${this.siteUrl}/lavora-con-noi`
@@ -122,7 +122,7 @@ export class MetaService {
    */
   setContactPageMeta(): void {
     this.setMetaTags({
-      title: 'Contattaci | Innova Tech Solutions',
+      title: 'Contattaci | RCODE',
       description: 'Contattaci per una consulenza strategica gratuita. Il nostro team è pronto ad ascoltare le tue esigenze.',
       keywords: 'contatti, contact, consulenza gratuita, support',
       url: `${this.siteUrl}/contatti`
