@@ -17,26 +17,7 @@ import { TranslationService, type Language } from '../../../core/services/transl
         <!-- Logo e Brand -->
         <div class="header-brand">
           <a routerLink="/" class="logo">
-            <svg class="logo-icon" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <!-- Outer circle -->
-              <circle cx="20" cy="20" r="18" stroke="#00d4ff" stroke-width="1.5" opacity="0.3"/>
-
-              <!-- Letter R with modern design -->
-              <g>
-                <!-- Vertical stem of R -->
-                <rect x="10" y="8" width="3" height="24" fill="#00d4ff" rx="1.5"/>
-
-                <!-- Top curve of R (upper bowl) -->
-                <path d="M 13 8 Q 20 8 20 14 Q 20 18 15 18" fill="none" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-
-                <!-- Diagonal leg of R -->
-                <line x1="16" y1="18" x2="26" y2="32" stroke="#00d4ff" stroke-width="3" stroke-linecap="round"/>
-              </g>
-
-              <!-- Accent dot indicating innovation -->
-              <circle cx="28" cy="10" r="2" fill="#00d4ff"/>
-            </svg>
-            <span class="logo-text">RCODE</span>
+            <img src="https://cdn.builder.io/api/v1/image/assets%2F1943edd12dc64bf8b23552caea052385%2Fd2cd5092fd5442e08df535875cd56ef1?format=webp&width=200&height=200" alt="RCODE Logo" class="logo-icon">
           </a>
         </div>
 
