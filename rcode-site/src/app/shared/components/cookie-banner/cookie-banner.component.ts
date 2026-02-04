@@ -1,7 +1,7 @@
 import { Component, signal } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
-import { CookieConsentService } from '../../core/services/cookie-consent.service';
+import { CookieConsentService } from '../../../core/services/cookie-consent.service';
 
 /**
  * Componente Cookie Banner
