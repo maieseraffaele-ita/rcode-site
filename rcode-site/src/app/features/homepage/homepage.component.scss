@@ -97,7 +97,7 @@ $desktop: 1024px;
 
   .gradient-text {
     display: block;
-    background: linear-gradient(135deg, $accent-color, #00a8cc);
+    background: linear-gradient(135deg, $accent-color, #0052a3);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text;
@@ -436,7 +436,7 @@ $desktop: 1024px;
   border: 1px solid $border-color;
 
   &:hover {
-    background: linear-gradient(135deg, $accent-color, #00a8cc);
+    background: linear-gradient(135deg, $accent-color, #0052a3);
     color: white;
     transform: translateY(-4px);
     box-shadow: 0 12px 30px rgba(0, 212, 255, 0.3);
