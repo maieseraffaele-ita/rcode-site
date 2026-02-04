@@ -1,0 +1,546 @@
+/**
+ * Homepage SCSS
+ * Stilizzazione della pagina principale con hero, value proposition e services
+ */
+
+// Variabili colori
+$primary-color: #1a1a2e;
+$secondary-color: #16213e;
+$accent-color: #00d4ff;
+$light-bg: #f8f9fa;
+$text-color: #333;
+$text-light: #666;
+$border-color: #e9ecef;
+
+// Breakpoints
+$tablet: 768px;
+$desktop: 1024px;
+
+.section-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: $tablet) {
+    padding: 0 1rem;
+  }
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+
+  h2 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: $primary-color;
+    margin: 0 0 1rem 0;
+    line-height: 1.2;
+
+    @media (max-width: $tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    color: $text-light;
+    margin: 0;
+  }
+}
+
+// Hero Section
+.hero {
+  padding: 6rem 2rem;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 50%, #ffffff 100%);
+  min-height: 600px;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    padding: 3rem 1rem;
+  }
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  animation: slideInLeft 0.7s ease-out;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  color: $primary-color;
+  margin: 0;
+  line-height: 1.2;
+
+  @media (max-width: $tablet) {
+    font-size: 2.2rem;
+  }
+
+  .gradient-text {
+    display: block;
+    background: linear-gradient(135deg, $accent-color, #00a8cc);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+}
+
+.hero-subtitle {
+  font-size: 1.1rem;
+  color: $text-light;
+  margin: 0;
+  line-height: 1.6;
+}
+
+.hero-cta {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+
+  @media (max-width: $tablet) {
+    flex-direction: column;
+  }
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1rem 2rem;
+  background: linear-gradient(135deg, $primary-color, #0d0d1a);
+  color: white;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+  cursor: pointer;
+
+  .arrow {
+    transition: transform 0.3s ease;
+  }
+
+  &:hover {
+    background: linear-gradient(135deg, #0d0d1a, $primary-color);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(26, 26, 46, 0.3);
+
+    .arrow {
+      transform: translateX(4px);
+    }
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  background-color: transparent;
+  color: $primary-color;
+  text-decoration: none;
+  border: 2px solid $primary-color;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background-color: $primary-color;
+    color: white;
+    transform: translateY(-3px);
+  }
+
+  @media (max-width: $tablet) {
+    width: 100%;
+    justify-content: center;
+  }
+}
+
+// Hero Stats
+.hero-stats {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-top: 1rem;
+  padding-top: 2rem;
+  border-top: 1px solid $border-color;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.stat {
+  text-align: left;
+
+  .stat-number {
+    font-size: 2rem;
+    font-weight: 700;
+    color: $accent-color;
+  }
+
+  .stat-label {
+    font-size: 0.9rem;
+    color: $text-light;
+    margin-top: 0.25rem;
+  }
+}
+
+// Hero Visual
+.hero-visual {
+  position: relative;
+  height: 400px;
+  animation: slideInRight 0.7s ease-out;
+
+  @media (max-width: $tablet) {
+    height: 300px;
+  }
+}
+
+.hero-image {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.floating-card {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  animation: float 3s ease-in-out infinite;
+
+  &.card-1 {
+    top: 20px;
+    left: 20px;
+    animation-delay: 0s;
+  }
+
+  &.card-2 {
+    top: 100px;
+    right: 40px;
+    animation-delay: 0.5s;
+  }
+
+  &.card-3 {
+    bottom: 40px;
+    left: 60px;
+    animation-delay: 1s;
+  }
+
+  .icon {
+    font-size: 2rem;
+  }
+
+  .label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $text-color;
+  }
+}
+
+.hero-shape {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at 30% 50%, rgba(0, 212, 255, 0.1) 0%, transparent 50%);
+  border-radius: 50%;
+  top: 0;
+  right: 0;
+}
+
+// Value Proposition Section
+.value-proposition {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.value-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+}
+
+.value-card {
+  padding: 2rem;
+  background-color: $light-bg;
+  border-radius: 12px;
+  border: 1px solid $border-color;
+  text-align: center;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .value-icon {
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    color: $primary-color;
+    margin: 0 0 0.75rem 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+    line-height: 1.6;
+  }
+}
+
+// Services Overview Section
+.services-overview {
+  padding: 4rem 0;
+  background-color: $light-bg;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.service-card {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  border: 2px solid $border-color;
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 12px 36px rgba(0, 212, 255, 0.2);
+    transform: translateY(-8px);
+
+    .service-icon {
+      transform: scale(1.2) rotate(5deg);
+    }
+  }
+
+  .service-icon {
+    font-size: 2.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  h3 {
+    font-size: 1.2rem;
+    color: $primary-color;
+    margin: 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+    flex-grow: 1;
+    line-height: 1.6;
+  }
+
+  .service-link {
+    color: $accent-color;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+
+    &:hover {
+      gap: 0.5rem;
+      padding-right: 0.25rem;
+    }
+  }
+}
+
+.services-cta {
+  text-align: center;
+}
+
+// Industries Preview Section
+.industries-preview {
+  padding: 4rem 0;
+  background-color: white;
+}
+
+.industries-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+
+  @media (max-width: 1024px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: $tablet) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.industry-card {
+  background: linear-gradient(135deg, $light-bg, #f0f4f8);
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  transition: all 0.3s ease;
+  border: 1px solid $border-color;
+
+  &:hover {
+    background: linear-gradient(135deg, $accent-color, #00a8cc);
+    color: white;
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 212, 255, 0.3);
+
+    .industry-icon {
+      transform: scale(1.3);
+    }
+
+    h3 {
+      color: white;
+    }
+
+    p {
+      color: rgba(255, 255, 255, 0.9);
+    }
+  }
+
+  .industry-icon {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+    transition: transform 0.3s ease;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    color: $primary-color;
+    margin: 0 0 0.5rem 0;
+    transition: color 0.3s ease;
+  }
+
+  p {
+    font-size: 0.9rem;
+    color: $text-light;
+    margin: 0;
+    transition: color 0.3s ease;
+  }
+}
+
+.industries-cta {
+  text-align: center;
+}
+
+// Final CTA Section
+.final-cta {
+  padding: 4rem 2rem;
+  background: linear-gradient(135deg, $primary-color, #0d0d1a);
+  color: white;
+  text-align: center;
+}
+
+.cta-content {
+  max-width: 700px;
+  margin: 0 auto;
+
+  h2 {
+    font-size: 2.5rem;
+    margin: 0 0 1rem 0;
+
+    @media (max-width: $tablet) {
+      font-size: 1.8rem;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    margin: 0 0 2rem 0;
+    color: rgba(255, 255, 255, 0.9);
+    line-height: 1.6;
+  }
+}
+
+.btn-large {
+  padding: 1.2rem 2.5rem;
+  font-size: 1.1rem;
+}
+
+// Animations
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-15px);
+  }
+}
