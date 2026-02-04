@@ -88,10 +88,25 @@ import { takeUntil } from 'rxjs/operators';
   `,
   styleUrl: './footer.component.scss'
 })
-export class FooterComponent {
+export class FooterComponent implements OnDestroy {
+  private destroy$ = new Subject<void>();
   currentYear = new Date().getFullYear();
 
-  constructor(protected translationService: TranslationService) {}
+  constructor(
+    protected translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    this.translationService.onLanguageChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
+  }
 
   /**
    * Metodo helper per accedere alle traduzioni nel template
