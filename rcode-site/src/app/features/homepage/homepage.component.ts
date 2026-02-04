@@ -264,10 +264,20 @@ import { TranslationService } from '../../core/services/translation.service';
   styleUrl: './homepage.component.scss'
 })
 export class HomepageComponent implements OnInit {
-  constructor(private metaService: MetaService) {}
+  constructor(
+    private metaService: MetaService,
+    protected translationService: TranslationService
+  ) {}
 
   ngOnInit(): void {
     // Imposta i metadati SEO per la homepage
     this.metaService.setHomePageMeta();
+  }
+
+  /**
+   * Metodo helper per accedere alle traduzioni nel template
+   */
+  t(key: string): string {
+    return this.translationService.translate(key);
   }
 }
