@@ -14,6 +14,7 @@ import { takeUntil } from 'rxjs/operators';
   selector: 'app-homepage',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <!-- Hero Section -->
     <section class="hero">
