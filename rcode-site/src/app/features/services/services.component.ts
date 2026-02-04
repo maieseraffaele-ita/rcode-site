@@ -322,10 +322,27 @@ import { takeUntil } from 'rxjs/operators';
   `,
   styleUrl: './services.component.scss'
 })
-export class ServicesComponent implements OnInit {
-  constructor(private metaService: MetaService) {}
+export class ServicesComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+
+  constructor(
+    private metaService: MetaService,
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    this.translationService.onLanguageChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
 
   ngOnInit(): void {
     this.metaService.setServicesPageMeta();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }
