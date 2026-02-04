@@ -68,6 +68,29 @@ $border-color: #e9ecef;
       display: flex;
       align-items: center;
       justify-content: center;
+      transition: filter 0.3s ease;
+
+      circle {
+        opacity: 0.2;
+        transition: opacity 0.3s ease;
+      }
+
+      line, path, rect {
+        transition: all 0.3s ease;
+      }
+    }
+
+    &:hover .logo-icon {
+      filter: drop-shadow(0 0 8px rgba(0, 212, 255, 0.6));
+
+      circle {
+        opacity: 0.8;
+        animation: pulse-ring 1.5s ease-in-out infinite;
+      }
+
+      line, path, rect {
+        stroke: #00a8cc;
+      }
     }
 
     .logo-text {
@@ -76,6 +99,17 @@ $border-color: #e9ecef;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+  }
+}
+
+@keyframes pulse-ring {
+  0%, 100% {
+    r: 18px;
+    opacity: 0.2;
+  }
+  50% {
+    r: 22px;
+    opacity: 0.05;
   }
 }
 
