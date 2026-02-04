@@ -44,7 +44,7 @@ import { MetaService } from '../../core/services/meta.service';
             <div class="timeline">
               <div class="timeline-item">
                 <span class="year">2009</span>
-                <span class="event">Fondazione di Innova Tech Solutions</span>
+                <span class="event">Fondazione di RCODE</span>
               </div>
               <div class="timeline-item">
                 <span class="year">2012</span>
