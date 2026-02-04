@@ -9,7 +9,7 @@ import { Meta, Title } from '@angular/platform-browser';
   providedIn: 'root'
 })
 export class MetaService {
-  private readonly siteUrl = 'https://www.innovatetech.it';
+  private readonly siteUrl = 'https://www.rcode.it';
   private readonly defaultImage = `${this.siteUrl}/assets/og-image.jpg`;
 
   constructor(
