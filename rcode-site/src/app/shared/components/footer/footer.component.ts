@@ -13,6 +13,7 @@ import { takeUntil } from 'rxjs/operators';
   selector: 'app-footer',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <footer class="footer">
       <div class="footer-container">
