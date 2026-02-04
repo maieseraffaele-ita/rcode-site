@@ -18,7 +18,7 @@ import { TranslationService, type Language } from '../../../core/services/transl
         <div class="header-brand">
           <a routerLink="/" class="logo">
             <span class="logo-icon">⚡</span>
-            <span class="logo-text">rcode</span>
+            <span class="logo-text">RCODE</span>
           </a>
         </div>
 
