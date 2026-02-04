@@ -14,6 +14,7 @@ import { takeUntil } from 'rxjs/operators';
   selector: 'app-services',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <!-- Hero Section -->
     <section class="services-hero">
