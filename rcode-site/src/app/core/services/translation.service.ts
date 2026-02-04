@@ -44,7 +44,7 @@ export class TranslationService {
       'home.hero_stat_3_label': 'Client satisfaction',
       
       // Value Proposition
-      'home.vp_title': 'Perché scegliere rcode?',
+      'home.vp_title': 'Perché scegliere RCODE?',
       'home.vp_subtitle': 'Tre pilastri che guidano il nostro approccio strategico',
       'home.vp_card_1_title': 'Risultati Misurabili',
       'home.vp_card_1_text': 'Ogni progetto è strutturato con KPI chiari e ROI tracciabile. Non proponiamo solo soluzioni: proponiamo crescita quantificabile.',
