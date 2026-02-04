@@ -34,24 +34,24 @@ import { TranslationService } from '../../../core/services/translation.service';
 
           <!-- Services Links -->
           <div class="footer-section">
-            <h4 class="footer-title">Servizi</h4>
+            <h4 class="footer-title">{{ t('footer.services') }}</h4>
             <ul class="footer-links">
-              <li><a routerLink="/servizi" [fragment]="'digital-transformation'">Trasformazione Digitale</a></li>
-              <li><a routerLink="/servizi" [fragment]="'cloud'">Cloud & Infrastructure</a></li>
-              <li><a routerLink="/servizi" [fragment]="'ai'">Artificial Intelligence</a></li>
-              <li><a routerLink="/servizi" [fragment]="'cybersecurity'">Cybersecurity</a></li>
-              <li><a routerLink="/servizi" [fragment]="'development'">Application Development</a></li>
+              <li><a routerLink="/servizi" [fragment]="'digital-transformation'">{{ t('service.digital_transformation') }}</a></li>
+              <li><a routerLink="/servizi" [fragment]="'cloud'">{{ t('service.cloud') }}</a></li>
+              <li><a routerLink="/servizi" [fragment]="'ai'">{{ t('service.ai') }}</a></li>
+              <li><a routerLink="/servizi" [fragment]="'cybersecurity'">{{ t('service.cybersecurity') }}</a></li>
+              <li><a routerLink="/servizi" [fragment]="'development'">{{ t('service.development') }}</a></li>
             </ul>
           </div>
 
           <!-- Company Links -->
           <div class="footer-section">
-            <h4 class="footer-title">Azienda</h4>
+            <h4 class="footer-title">{{ t('footer.company') }}</h4>
             <ul class="footer-links">
-              <li><a routerLink="/chi-siamo">Chi Siamo</a></li>
-              <li><a routerLink="/industrie">Industrie</a></li>
-              <li><a routerLink="/lavora-con-noi">Lavora Con Noi</a></li>
-              <li><a routerLink="/contatti">Contatti</a></li>
+              <li><a routerLink="/chi-siamo">{{ t('nav.about') }}</a></li>
+              <li><a routerLink="/industrie">{{ t('nav.industries') }}</a></li>
+              <li><a routerLink="/lavora-con-noi">{{ t('nav.careers') }}</a></li>
+              <li><a routerLink="/contatti">{{ t('nav.contact') }}</a></li>
               <li><a href="mailto:info@innovatetech.it">Email</a></li>
             </ul>
           </div>
