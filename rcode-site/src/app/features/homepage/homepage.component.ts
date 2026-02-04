@@ -235,15 +235,30 @@ import { takeUntil } from 'rxjs/operators';
   `,
   styleUrl: './homepage.component.scss'
 })
-export class HomepageComponent implements OnInit {
+export class HomepageComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
+
   constructor(
     private metaService: MetaService,
-    protected translationService: TranslationService
-  ) {}
+    protected translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    // Sottoscrizione al cambio di lingua per reagire e re-renderizzare il componente
+    this.translationService.onLanguageChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
 
   ngOnInit(): void {
     // Imposta i metadati SEO per la homepage
     this.metaService.setHomePageMeta();
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 
   /**
