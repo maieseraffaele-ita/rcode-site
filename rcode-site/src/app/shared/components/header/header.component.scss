@@ -62,7 +62,12 @@ $border-color: #e9ecef;
     }
 
     .logo-icon {
-      font-size: 1.5rem;
+      width: 32px;
+      height: 32px;
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
     }
 
     .logo-text {
