@@ -95,7 +95,7 @@ $border-color: #e9ecef;
     &:focus {
       outline: none;
       border-color: $accent-color;
-      box-shadow: 0 0 0 3px rgba(0, 212, 255, 0.1);
+      box-shadow: 0 0 0 3px rgba(0, 102, 204, 0.1);
     }
 
     &::placeholder {
