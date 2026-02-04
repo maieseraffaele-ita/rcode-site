@@ -1,0 +1,342 @@
+/**
+ * About Component SCSS
+ */
+
+$primary-color: #1a1a2e;
+$secondary-color: #16213e;
+$accent-color: #00d4ff;
+$light-bg: #f8f9fa;
+$text-color: #333;
+$text-light: #666;
+$border-color: #e9ecef;
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+
+  @media (max-width: 768px) {
+    padding: 0 1rem;
+  }
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: $text-light;
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+// Hero Section
+.about-hero {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  padding: 4rem 2rem;
+  text-align: center;
+
+  h1 {
+    font-size: 3rem;
+    margin: 0 0 1rem 0;
+
+    @media (max-width: 768px) {
+      font-size: 2rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+    opacity: 0.9;
+    margin: 0;
+  }
+}
+
+// Company Story
+.company-story {
+  padding: 4rem 0;
+
+  h2 {
+    font-size: 2.2rem;
+    color: $primary-color;
+    margin-bottom: 1.5rem;
+  }
+}
+
+.story-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.story-text {
+  p {
+    color: $text-light;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+    font-size: 1rem;
+  }
+}
+
+.timeline {
+  .timeline-item {
+    display: flex;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+    padding-left: 2rem;
+    border-left: 3px solid $accent-color;
+    position: relative;
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: -8px;
+      top: 0;
+      width: 13px;
+      height: 13px;
+      background: $accent-color;
+      border-radius: 50%;
+    }
+
+    .year {
+      font-weight: 700;
+      color: $accent-color;
+      min-width: 60px;
+    }
+
+    .event {
+      color: $text-color;
+      font-weight: 500;
+    }
+  }
+}
+
+// Mission, Vision, Values
+.mvv {
+  padding: 4rem 0;
+  background-color: $light-bg;
+}
+
+.mvv-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.mvv-card {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 12px;
+  border: 2px solid $border-color;
+  transition: all 0.3s ease;
+
+  &.primary {
+    border-color: $accent-color;
+    background: rgba(0, 212, 255, 0.05);
+  }
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+    transform: translateY(-4px);
+  }
+
+  h3 {
+    font-size: 1.5rem;
+    color: $primary-color;
+    margin: 0 0 1rem 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+    line-height: 1.7;
+  }
+
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li {
+      margin-bottom: 0.75rem;
+      color: $text-light;
+      line-height: 1.6;
+
+      strong {
+        color: $primary-color;
+      }
+    }
+  }
+}
+
+// Team & Culture
+.team-culture {
+  padding: 4rem 0;
+
+  h2 {
+    font-size: 2.2rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.culture-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.culture-item {
+  text-align: center;
+  padding: 2rem;
+  background: $light-bg;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+
+  &:hover {
+    background: white;
+    border: 2px solid $accent-color;
+    transform: translateY(-4px);
+  }
+
+  .icon {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    display: block;
+  }
+
+  h3 {
+    font-size: 1.1rem;
+    color: $primary-color;
+    margin: 0 0 0.75rem 0;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.6;
+  }
+}
+
+// Certifications
+.certifications {
+  padding: 4rem 0;
+  background-color: $light-bg;
+
+  h2 {
+    font-size: 2.2rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+}
+
+.certs-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+  margin-top: 3rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @media (max-width: 480px) {
+    grid-template-columns: 1fr;
+  }
+}
+
+.cert-item {
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid $border-color;
+  transition: all 0.3s ease;
+
+  &:hover {
+    border-color: $accent-color;
+    box-shadow: 0 8px 24px rgba(0, 212, 255, 0.15);
+    transform: translateY(-4px);
+
+    .cert-badge {
+      background: $accent-color;
+      color: white;
+    }
+  }
+
+  .cert-badge {
+    display: inline-block;
+    padding: 0.75rem 1.5rem;
+    background: $light-bg;
+    color: $accent-color;
+    border-radius: 6px;
+    font-weight: 700;
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+    transition: all 0.3s ease;
+  }
+
+  p {
+    color: $text-light;
+    margin: 0;
+  }
+}
+
+// CTA Section
+.about-cta {
+  background: linear-gradient(135deg, $primary-color, $secondary-color);
+  color: white;
+  padding: 3rem 2rem;
+  text-align: center;
+
+  h2 {
+    color: white;
+    margin-bottom: 0.5rem;
+    font-size: 2rem;
+  }
+
+  p {
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 2rem;
+    font-size: 1.05rem;
+  }
+
+  .btn-primary {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 1rem 2rem;
+    background: $accent-color;
+    color: $primary-color;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: 700;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 12px 30px rgba(0, 212, 255, 0.4);
+    }
+  }
+}
