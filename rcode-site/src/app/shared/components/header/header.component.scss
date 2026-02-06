@@ -98,7 +98,7 @@ $border-color: #e9ecef;
 .nav-desktop {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
+  gap: 1rem;
   flex: 1;
   justify-content: center;
 
@@ -107,24 +107,27 @@ $border-color: #e9ecef;
   }
 
   .nav-link {
-    padding: 0.5rem 1rem;
+    padding: 0.625rem 1.25rem;
     text-decoration: none;
     color: $text-color;
     font-weight: 500;
     font-size: 0.95rem;
-    border-radius: 6px;
+    border-radius: 8px;
     transition: all 0.3s ease;
     position: relative;
+    white-space: nowrap;
 
     &::after {
       content: '';
       position: absolute;
-      bottom: 0;
-      left: 0;
-      width: 0;
+      bottom: 8px;
+      left: 1.25rem;
+      right: 1.25rem;
       height: 2px;
       background-color: $accent-color;
-      transition: width 0.3s ease;
+      transition: all 0.3s ease;
+      transform: scaleX(0);
+      transform-origin: left;
     }
 
     &:hover {
@@ -132,16 +135,16 @@ $border-color: #e9ecef;
       background-color: rgba(0, 102, 204, 0.05);
 
       &::after {
-        width: 100%;
+        transform: scaleX(1);
       }
     }
 
     &.active {
       color: $accent-color;
-      background-color: rgba(0, 102, 204, 0.1);
+      background-color: rgba(0, 102, 204, 0.08);
 
       &::after {
-        width: 100%;
+        transform: scaleX(1);
       }
     }
   }
