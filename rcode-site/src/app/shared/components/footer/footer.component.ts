@@ -22,7 +22,8 @@ import { takeUntil } from 'rxjs/operators';
           <!-- Company Info -->
           <div class="footer-section footer-company">
             <div class="footer-brand">
-              <img src="https://cdn.builder.io/api/v1/image/assets%2F1943edd12dc64bf8b23552caea052385%2Fd2cd5092fd5442e08df535875cd56ef1?format=webp&width=200&height=200" alt="RCODE Logo" class="logo-icon">
+              <img src="https://cdn.builder.io/api/v1/image/assets%2F1943edd12dc64bf8b23552caea052385%2Fdb7c3236ea6249879c288e0f06329919?format=webp&width=800&height=1200" alt="RCODE Logo" class="logo-icon">
+              <span class="logo-text">RCODE</span>
             </div>
             <p class="company-description">
               {{ t('footer.company_description') }}
