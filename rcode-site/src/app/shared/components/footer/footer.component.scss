@@ -212,7 +212,7 @@ $border-color: #e9ecef;
 // Badges
 .footer-badges {
   display: flex;
-  gap: 1rem;
+  gap: 1.25rem;
   flex-wrap: wrap;
   justify-content: flex-end;
 
@@ -222,13 +222,22 @@ $border-color: #e9ecef;
 
   .badge {
     display: inline-block;
-    padding: 0.5rem 1rem;
-    background-color: $primary-color;
-    color: $accent-color;
-    border-radius: 4px;
-    font-size: 0.75rem;
+    padding: 0.65rem 1.25rem;
+    background: linear-gradient(135deg, rgba(0, 26, 77, 0.95), rgba(0, 26, 77, 0.85));
+    color: white;
+    border-radius: 6px;
+    font-size: 0.8rem;
     font-weight: 600;
     text-transform: uppercase;
-    letter-spacing: 0.5px;
+    letter-spacing: 0.6px;
+    border: 1px solid rgba(0, 102, 204, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 4px 12px rgba(0, 26, 77, 0.1);
+
+    &:hover {
+      border-color: rgba(0, 102, 204, 0.4);
+      box-shadow: 0 6px 16px rgba(0, 102, 204, 0.15);
+      transform: translateY(-2px);
+    }
   }
 }
