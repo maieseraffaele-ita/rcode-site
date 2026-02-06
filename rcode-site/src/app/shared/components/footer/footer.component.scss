@@ -19,12 +19,16 @@ $border-color: #e9ecef;
 }
 
 .footer-container {
-  max-width: 1200px;
+  max-width: 1400px;
   margin: 0 auto;
-  padding: 0 2rem;
+  padding: 0 3rem;
+
+  @media (max-width: 1200px) {
+    padding: 0 2.5rem;
+  }
 
   @media (max-width: 768px) {
-    padding: 0 1rem;
+    padding: 0 1.5rem;
   }
 }
 
