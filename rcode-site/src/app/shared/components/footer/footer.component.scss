@@ -188,13 +188,13 @@ $border-color: #e9ecef;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 2rem 0;
-  border-top: 1px solid $border-color;
+  padding: 2.5rem 0;
+  border-top: 1px solid rgba(0, 26, 77, 0.08);
   gap: 2rem;
 
   @media (max-width: 768px) {
     flex-direction: column;
-    gap: 1rem;
+    gap: 1.5rem;
     text-align: center;
   }
 }
