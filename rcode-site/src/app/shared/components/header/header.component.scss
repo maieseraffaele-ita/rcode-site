@@ -205,25 +205,26 @@ $border-color: #e9ecef;
 // Button Styles
 .btn-primary {
   display: inline-block;
-  padding: 0.75rem 1.5rem;
+  padding: 0.85rem 2rem;
   background: linear-gradient(135deg, $primary-color, #0d0d1a);
   color: white;
   text-decoration: none;
-  border-radius: 6px;
+  border-radius: 8px;
   font-weight: 600;
   font-size: 0.95rem;
   transition: all 0.3s ease;
   border: 2px solid transparent;
   cursor: pointer;
+  box-shadow: 0 4px 15px rgba(0, 26, 77, 0.15);
 
   &:hover {
     background: linear-gradient(135deg, #0d0d1a, $primary-color);
-    transform: translateY(-2px);
-    box-shadow: 0 8px 20px rgba(26, 26, 46, 0.3);
+    transform: translateY(-3px);
+    box-shadow: 0 12px 28px rgba(0, 26, 77, 0.2);
   }
 
   &:active {
-    transform: translateY(0);
+    transform: translateY(-1px);
   }
 }
 
