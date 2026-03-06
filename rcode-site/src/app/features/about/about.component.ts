@@ -7,8 +7,8 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 /**
- * Componente Chi Siamo (About)
- * Presentation della storia, mission, vision e valori dell'azienda
+ * About Component - Personal Bio & Journey
+ * Mostra la biografia personale, il percorso professionale e le competenze
  */
 @Component({
   selector: 'app-about',
@@ -19,56 +19,58 @@ import { takeUntil } from 'rxjs/operators';
     <!-- Hero Section -->
     <section class="about-hero">
       <div class="container">
-        <h1>Chi Siamo</h1>
-        <p>Leader nella consulenza strategica e trasformazione digitale dal 2009</p>
+        <h1>{{ t('about.hero_title') }}</h1>
+        <p>{{ t('about.hero_subtitle') }}</p>
       </div>
     </section>
 
-    <!-- Company Story -->
+    <!-- Personal Story -->
     <section class="company-story">
       <div class="container">
         <div class="story-grid">
           <div class="story-text">
-            <h2>La nostra storia</h2>
+            <h2>{{ t('about.story_title') }}</h2>
             <p>
-              RCODE nasce nel 2009 da una visione semplice ma potente:
-              trasformare il modo in cui le aziende utilizzano la tecnologia per crescere.
+              Ciao! Sono un Full-stack Developer italiano appassionato di tecnologia e problem solving.
+              Ho iniziato il mio percorso nell'informatica oltre 8 anni fa e da allora ho lavorato su 
+              progetti diverse negli ambiti web, cloud e data.
             </p>
             <p>
-              In questi 15 anni, abbiamo accompagnato centinaia di aziende nel loro percorso 
-              di innovazione digitale, passando dalle prime implementazioni cloud alle 
-              soluzioni più complesse di AI e intelligenza artificiale.
+              La mia filosofia è semplice: creare soluzioni software di qualità, mantenibile e scalabile.
+              Non mi piace il "quick and dirty" - preferisco investire un po' più di tempo per scrivere 
+              codice pulito che sia un piacere mantenere.
             </p>
             <p>
-              Oggi, siamo un team di oltre 150 esperti distribuiti in 5 paesi, 
-              con un track record di 500+ progetti completati con successo.
+              Quando non sto codificando, mi piace imparare nuove tecnologie, leggere articoli tech
+              e contribuire a progetti open source. Credo nel continuous learning e nella condivisione
+              della conoscenza con la comunità.
             </p>
           </div>
           <div class="story-visual">
             <div class="timeline">
               <div class="timeline-item">
-                <span class="year">2009</span>
-                <span class="event">Fondazione di RCODE</span>
+                <span class="year">2016</span>
+                <span class="event">Inizio del percorso nello sviluppo web</span>
               </div>
               <div class="timeline-item">
-                <span class="year">2012</span>
-                <span class="event">Apertura ufficio Europa</span>
-              </div>
-              <div class="timeline-item">
-                <span class="year">2015</span>
-                <span class="event">Specializzazione in Cloud Computing</span>
+                <span class="year">2017</span>
+                <span class="event">Prima esperienza professionale come developer</span>
               </div>
               <div class="timeline-item">
                 <span class="year">2018</span>
-                <span class="event">Lancio Practice in AI & Machine Learning</span>
+                <span class="event">Specializzazione in Frontend (Angular)</span>
+              </div>
+              <div class="timeline-item">
+                <span class="year">2019</span>
+                <span class="event">Passaggio a Full-Stack Development</span>
               </div>
               <div class="timeline-item">
                 <span class="year">2021</span>
-                <span class="event">Certificazione ISO 27001</span>
+                <span class="event">Expertise in Cloud & DevOps</span>
               </div>
               <div class="timeline-item">
                 <span class="year">2024</span>
-                <span class="event">Centro di Eccellenza in AI & Data</span>
+                <span class="event">Focus su soluzioni enterprise-grade</span>
               </div>
             </div>
           </div>
@@ -76,91 +78,92 @@ import { takeUntil } from 'rxjs/operators';
       </div>
     </section>
 
-    <!-- Mission, Vision, Values -->
+    <!-- Skills & Focus Areas -->
     <section class="mvv">
       <div class="container">
         <div class="mvv-grid">
           <div class="mvv-card primary">
-            <h3>Mission</h3>
+            <h3>Cosa mi Piace Fare</h3>
             <p>
-              Accelerare la trasformazione digitale delle aziende fornendo 
-              expertise tecnologica, strategie innovative e soluzioni che generano 
-              valore misurabile.
+              Mi piace lavorare su sfide tecniche interessanti dove posso usare le mie competenze
+              per creare soluzioni che fanno realmente la differenza. Preferisco collaborare con team
+              appassionati e clienti che capiscono il valore di un codice ben fatto.
             </p>
           </div>
           <div class="mvv-card">
-            <h3>Vision</h3>
+            <h3>Approccio Metodologico</h3>
             <p>
-              Un mondo dove la tecnologia è un abilitatore di crescita 
-              e innovazione per ogni azienda, indipendentemente dalla sua dimensione.
+              Credo nel TDD, SOLID principles e architetture pulite. Non mi fermo a "funziona",
+              mi chiedo "è mantenibile? è scalabile? è testato?". La performance e la sicurezza
+              sono sempre prioritari.
             </p>
           </div>
           <div class="mvv-card">
-            <h3>Valori</h3>
+            <h3>Valori Professionali</h3>
             <ul>
-              <li><strong>Eccellenza:</strong> Perseguiamo i massimi standard di qualità</li>
-              <li><strong>Integrità:</strong> Agire con trasparenza e etica</li>
-              <li><strong>Innovazione:</strong> Rimanere all'avanguardia tecnologica</li>
-              <li><strong>Partnership:</strong> Crescere insieme ai nostri clienti</li>
+              <li><strong>Qualità:</strong> Codice ben scritto e testato</li>
+              <li><strong>Comunicazione:</strong> Chiarezza e trasparenza</li>
+              <li><strong>Curiosità:</strong> Sempre voglia di imparare</li>
+              <li><strong>Responsabilità:</strong> Impegno verso i progetti</li>
             </ul>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Team & Culture -->
+    <!-- Tech Stack & Expertise -->
     <section class="team-culture">
       <div class="container">
-        <h2>Il nostro team</h2>
-        <p class="section-subtitle">Persone talentuose con passion per l'innovazione</p>
+        <h2>Tech Stack & Expertise</h2>
+        <p class="section-subtitle">Tecnologie e linguaggi che padroneggio</p>
         
         <div class="culture-grid">
           <div class="culture-item">
-            <div class="icon">🎓</div>
-            <h3>Formazione Continua</h3>
-            <p>Investiamo nella crescita professionale del nostro team con programmi di training dedicati.</p>
-          </div>
-          <div class="culture-item">
-            <div class="icon">🌍</div>
-            <h3>Inclusione e Diversità</h3>
-            <p>Un ambiente dove ogni talento può esprimere al meglio il proprio potenziale.</p>
+            <div class="icon">🎨</div>
+            <h3>Frontend</h3>
+            <p>Angular, TypeScript, RxJS, SCSS, HTML5, Responsive Design, Web Accessibility</p>
           </div>
           <div class="culture-item">
             <div class="icon">⚙️</div>
-            <h3>Approccio Agile</h3>
-            <p>Metodologie moderne e flessibili che permettono innovazione rapida.</p>
+            <h3>Backend</h3>
+            <p>Node.js, Express.js, REST APIs, GraphQL, Authentication, Microservices</p>
           </div>
           <div class="culture-item">
-            <div class="icon">🚀</div>
-            <h3>Impatto Sociale</h3>
-            <p>Contribuiamo alla comunità attraverso progetti di responsabilità sociale.</p>
+            <div class="icon">💾</div>
+            <h3>Database</h3>
+            <p>PostgreSQL, MySQL, MongoDB, Firebase, Supabase, Database Design & Optimization</p>
+          </div>
+          <div class="culture-item">
+            <div class="icon">☁️</div>
+            <h3>Cloud & DevOps</h3>
+            <p>AWS, GCP, Docker, CI/CD, GitHub Actions, Infrastructure as Code, Linux</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Certifications & Partnerships -->
+    <!-- Certifications & Learning -->
     <section class="certifications">
       <div class="container">
-        <h2>Certificazioni e Partnership</h2>
-        <p class="section-subtitle">Riconoscimenti che attestano la nostra eccellenza</p>
+        <h2>Certificazioni & Formazione</h2>
+        <p class="section-subtitle">Continuo a investire nella mia crescita professionale</p>
         
         <div class="certs-grid">
           <div class="cert-item">
-            <span class="cert-badge">ISO 27001</span>
-            <p>Gestione della Sicurezza dell'Informazione</p>
+            <span class="cert-badge">AWS Certified</span>
+            <p>AWS Solutions Architect Associate</p>
           </div>
           <div class="cert-item">
-            <span class="cert-badge">AWS Partner</span>
-            <p>Advanced Technology Partner</p>
-          </div>
-          <div class="cert-item">
-            <span class="cert-badge">Microsoft Gold</span>
-            <p>Certified Partner</p>
+            <span class="cert-badge">Docker Certified</span>
+            <p>Docker Certified Associate</p>
           </div>
           <div class="cert-item">
             <span class="cert-badge">Google Cloud</span>
-            <p>Select Partner</p>
+            <p>Professional Cloud Architect</p>
+          </div>
+          <div class="cert-item">
+            <span class="cert-badge">Full-Stack</span>
+            <p>Multiple courses & training programs</p>
           </div>
         </div>
       </div>
@@ -169,10 +172,10 @@ import { takeUntil } from 'rxjs/operators';
     <!-- CTA -->
     <section class="about-cta">
       <div class="container">
-        <h2>Vuoi far parte del nostro team?</h2>
-        <p>Scopri le opportunità di carriera presso Innova Tech Solutions</p>
-        <a routerLink="/lavora-con-noi" class="btn-primary">
-          Vedi le nostre offerte
+        <h2>Vuoi collaborare?</h2>
+        <p>Scopri i miei progetti nel portfolio e contattami per discutere una possibile collaborazione</p>
+        <a routerLink="/industrie" class="btn-primary">
+          Vedi il mio portfolio
           <span class="arrow">→</span>
         </a>
       </div>
@@ -197,6 +200,11 @@ export class AboutComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.metaService.setAboutPageMeta();
+  }
+
+  // Helper method for translations
+  t(key: string): string {
+    return this.translationService.translate(key);
   }
 
   ngOnDestroy(): void {

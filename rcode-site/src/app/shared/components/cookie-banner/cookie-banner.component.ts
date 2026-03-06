@@ -1,17 +1,21 @@
-import { Component, signal } from '@angular/core';
+import { Component, signal, OnInit, OnDestroy, ChangeDetectionStrategy, ChangeDetectorRef } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { RouterLink } from '@angular/router';
 import { CookieConsentService } from '../../../core/services/cookie-consent.service';
+import { TranslationService } from '../../../core/services/translation.service';
+import { Subject } from 'rxjs';
+import { takeUntil } from 'rxjs/operators';
 
 /**
  * Componente Cookie Banner
- * Implementa il banner cookie GDPR-compliant
+ * Implementa il banner cookie GDPR-compliant con traduzioni
  * Permette all'utente di accettare/rifiutare cookie
  */
 @Component({
   selector: 'app-cookie-banner',
   standalone: true,
   imports: [CommonModule, RouterLink],
+  changeDetection: ChangeDetectionStrategy.OnPush,
   template: `
     <div class="cookie-banner" [@slideIn]>
       <div class="cookie-container">
@@ -19,11 +23,10 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
         <div class="cookie-content">
           <div class="cookie-icon">🍪</div>
           <div class="cookie-text">
-            <h3 class="cookie-title">Preferenze Cookie</h3>
+            <h3 class="cookie-title">{{ t('cookie.preferences') }}</h3>
             <p class="cookie-description">
-              Utilizziamo cookie per migliorare la tua esperienza di navigazione, 
-              personalizzare i contenuti e analizzare il traffico del sito. 
-              <a routerLink="/cookie-policy" class="link">Scopri di più</a> su come utilizziamo i cookie.
+              {{ t('cookie.description') }}
+              <a routerLink="/cookie-policy" class="link">{{ t('cookie.learn_more') }}</a>
             </p>
 
             <!-- Cookie Details (Collapsible) -->
@@ -32,8 +35,8 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
                 <label class="cookie-checkbox">
                   <input type="checkbox" [checked]="true" disabled class="checkbox">
                   <span class="checkbox-label">
-                    <strong>Cookie Tecnici (Necessari)</strong>
-                    <small>Sempre abilitati per il funzionamento del sito</small>
+                    <strong>{{ t('cookie.necessary_title') }}</strong>
+                    <small>{{ t('cookie.necessary_desc') }}</small>
                   </span>
                 </label>
               </div>
@@ -43,8 +46,8 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
                   <input type="checkbox" [checked]="cookieService.analyticsConsent()" 
                          (change)="toggleAnalytics($event)">
                   <span class="checkbox-label">
-                    <strong>Cookie Analytics</strong>
-                    <small>Ci aiutano a capire come utilizzi il sito</small>
+                    <strong>{{ t('cookie.analytics_title') }}</strong>
+                    <small>{{ t('cookie.analytics_desc') }}</small>
                   </span>
                 </label>
               </div>
@@ -54,8 +57,8 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
                   <input type="checkbox" [checked]="cookieService.marketingConsent()" 
                          (change)="toggleMarketing($event)">
                   <span class="checkbox-label">
-                    <strong>Cookie Marketing</strong>
-                    <small>Utilizzati per mostrarti annunci personalizzati</small>
+                    <strong>{{ t('cookie.marketing_title') }}</strong>
+                    <small>{{ t('cookie.marketing_desc') }}</small>
                   </span>
                 </label>
               </div>
@@ -63,7 +66,7 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
 
             <!-- Toggle Details Button -->
             <button class="toggle-details-btn" (click)="toggleDetailsView()">
-              {{ showDetails() ? 'Nascondi dettagli' : 'Mostra dettagli' }}
+              {{ showDetails() ? t('cookie.hide_details') : t('cookie.show_details') }}
             </button>
           </div>
         </div>
@@ -71,29 +74,44 @@ import { CookieConsentService } from '../../../core/services/cookie-consent.serv
         <!-- Cookie Actions -->
         <div class="cookie-actions">
           <button class="btn-secondary" (click)="rejectCookies()">
-            Rifiuta Tutto
+            {{ t('cookie.reject_all') }}
           </button>
           <button class="btn-primary" (click)="acceptCookies()">
-            Accetta Tutto
+            {{ t('cookie.accept_all') }}
           </button>
         </div>
       </div>
 
       <!-- Legal Reference -->
       <p class="gdpr-reference">
-        Conformità a <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank">Regolamento UE 2016/679 (GDPR)</a> 
-        | <a routerLink="/privacy-policy">Privacy Policy</a>
+        {{ t('cookie.gdpr_compliance') }} <a href="https://eur-lex.europa.eu/eli/reg/2016/679/oj" target="_blank">GDPR</a> 
+        | <a routerLink="/privacy-policy">{{ t('footer.privacy') }}</a>
       </p>
     </div>
   `,
   styleUrl: './cookie-banner.component.scss'
 })
-export class CookieBannerComponent {
+export class CookieBannerComponent implements OnInit, OnDestroy {
+  private destroy$ = new Subject<void>();
   showDetails = signal<boolean>(false);
   analyticsChecked = signal<boolean>(false);
   marketingChecked = signal<boolean>(false);
 
-  constructor(public cookieService: CookieConsentService) {}
+  constructor(
+    public cookieService: CookieConsentService,
+    private translationService: TranslationService,
+    private cdr: ChangeDetectorRef
+  ) {
+    this.translationService.onLanguageChange()
+      .pipe(takeUntil(this.destroy$))
+      .subscribe(() => {
+        this.cdr.markForCheck();
+      });
+  }
+
+  ngOnInit(): void {
+    // Initialize on language change
+  }
 
   /**
    * Accetta tutti i cookie
@@ -130,5 +148,17 @@ export class CookieBannerComponent {
   toggleMarketing(event: Event): void {
     const target = event.target as HTMLInputElement;
     this.marketingChecked.set(target.checked);
+  }
+
+  /**
+   * Helper method for translations
+   */
+  t(key: string): string {
+    return this.translationService.translate(key);
+  }
+
+  ngOnDestroy(): void {
+    this.destroy$.next();
+    this.destroy$.complete();
   }
 }

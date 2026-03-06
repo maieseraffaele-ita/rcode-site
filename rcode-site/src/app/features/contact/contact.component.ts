@@ -51,33 +51,32 @@ import { takeUntil } from 'rxjs/operators';
               </div>
 
               <div class="form-group">
-                <label for="company">{{ t('contact.form_company') }} *</label>
+                <label for="company">Compagnia/Progetto *</label>
                 <input
                   type="text"
                   id="company"
                   [(ngModel)]="formData.company"
                   name="company"
-                  required
-                  [placeholder]="t('contact.form_company')"
+                  [placeholder]="'Il tuo progetto o compagnia'"
                 >
               </div>
 
               <div class="form-group">
-                <label for="service">{{ t('contact.form_service') }} *</label>
+                <label for="service">Tipo di Collaborazione *</label>
                 <select
                   id="service"
                   [(ngModel)]="formData.service"
                   name="service"
                   required
                 >
-                  <option value="">{{ t('contact.form_service_select') }}</option>
-                  <option value="digital-transformation">{{ t('service.digital_transformation') }}</option>
-                  <option value="cloud">{{ t('service.cloud') }}</option>
-                  <option value="ai">{{ t('service.ai') }}</option>
-                  <option value="cybersecurity">{{ t('service.cybersecurity') }}</option>
-                  <option value="development">{{ t('service.development') }}</option>
-                  <option value="consulting">{{ t('service.consulting') }}</option>
-                  <option value="other">{{ t('contact.form_service_other') }}</option>
+                  <option value="">Seleziona tipo di collaborazione</option>
+                  <option value="project">Progetto Specifico</option>
+                  <option value="consulting">Consulenza Tecnica</option>
+                  <option value="mentoring">Mentoring & Training</option>
+                  <option value="contract">Contratto Orario</option>
+                  <option value="fulltime">Full-Time</option>
+                  <option value="partnership">Partnership</option>
+                  <option value="other">Altro</option>
                 </select>
               </div>
 
@@ -117,53 +116,37 @@ import { takeUntil } from 'rxjs/operators';
           <!-- Contact Information -->
           <div class="contact-info">
             <div class="info-card">
-              <h3>{{ t('contact.headquarters') }}</h3>
+              <h3>Email</h3>
               <p>
-                <strong>Milano</strong><br>
-                Via Innovazione 42<br>
-                20100 Milano (MI)<br>
-                <a href="tel:+390287654321">+39 02 8765 4321</a>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <h3>{{ t('contact.office_rome') }}</h3>
-              <p>
-                <strong>Roma</strong><br>
-                Via della Tecnologia 15<br>
-                00100 Roma (RM)<br>
-                <a href="tel:+390612345678">+39 06 1234 5678</a>
-              </p>
-            </div>
-
-            <div class="info-card">
-              <h3>{{ t('contact.email') }}</h3>
-              <p>
-                <strong>{{ t('contact.email_general') }}</strong><br>
-                <a href="mailto:info@rcode.it">info@rcode.it</a><br><br>
-                <strong>{{ t('contact.email_sales') }}</strong><br>
-                <a href="mailto:sales@rcode.it">sales@rcode.it</a><br><br>
-                <strong>{{ t('contact.email_support') }}</strong><br>
-                <a href="mailto:support@rcode.it">support@rcode.it</a>
+                <a href="mailto:raffaele@rcode.it">raffaele@rcode.it</a><br>
+                <small>Risponderò entro 24 ore</small>
               </p>
             </div>
 
             <div class="info-card">
               <h3>{{ t('contact.social') }}</h3>
               <div class="social-links">
-                <a href="https://linkedin.com" target="_blank" rel="noopener">LinkedIn</a>
-                <a href="https://twitter.com" target="_blank" rel="noopener">Twitter</a>
-                <a href="https://github.com" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://linkedin.com/in/raffaelemaiese" target="_blank" rel="noopener">LinkedIn</a>
+                <a href="https://github.com/maieseraffaele-ita" target="_blank" rel="noopener">GitHub</a>
+                <a href="https://twitter.com/raffaele" target="_blank" rel="noopener">Twitter</a>
               </div>
             </div>
 
-            <div class="office-hours">
+            <div class="info-card">
+              <h3>Ubicazione</h3>
+              <p>
+                Based in Italia 🇮🇹<br>
+                <small>Disponibile per collaborazioni remote e on-site</small>
+              </p>
+            </div>
+
+            <div class="info-card">
               <h3>{{ t('contact.office_hours') }}</h3>
               <p>
-                {{ t('contact.office_hours_weekday') }}<br>
-                {{ t('contact.office_hours_weekend') }}<br>
+                Lunedì - Venerdì: 9:00 - 18:00<br>
+                Sabato - Domenica: Chiuso<br>
                 <br>
-                <em>{{ t('contact.office_hours_response') }}</em>
+                <em>Risponderò a tutte le richieste entro 24 ore lavorative</em>
               </p>
             </div>
           </div>

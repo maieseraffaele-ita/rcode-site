@@ -7,8 +7,8 @@ import { Subject } from 'rxjs';
 import { takeUntil } from 'rxjs/operators';
 
 /**
- * Componente Services
- * Dettaglio di tutti i servizi offerti
+ * Componente Skills & Expertise
+ * Mostra le competenze principali e tecnologie utilizzate
  */
 @Component({
   selector: 'app-services',
@@ -19,260 +19,254 @@ import { takeUntil } from 'rxjs/operators';
     <!-- Hero Section -->
     <section class="services-hero">
       <div class="container">
-        <h1>I nostri servizi</h1>
-        <p>Soluzioni complete per la trasformazione digitale del tuo business</p>
+        <h1>{{ t('services.hero_title') }}</h1>
+        <p>{{ t('services.hero_subtitle') }}</p>
       </div>
     </section>
 
-    <!-- Services Detailed Section -->
+    <!-- Skills Detailed Section -->
     <section class="services-detailed">
       <div class="container">
-        <!-- Digital Transformation -->
-        <div class="service-detail" id="digital-transformation">
+        <!-- Frontend -->
+        <div class="service-detail" id="frontend">
           <div class="service-header">
-            <span class="service-icon">🔄</span>
-            <h2>Trasformazione Digitale</h2>
+            <span class="service-icon">🎨</span>
+            <h2>Frontend Development</h2>
           </div>
           <div class="service-content">
             <div class="service-text">
               <p>
-                La trasformazione digitale non è una scelta ma una necessità. 
-                Ti guidiamo attraverso un percorso strategico che ripensa processi, 
-                organizzazione e cultura aziendale.
+                Creo interfacce web moderne, responsive e accessibili usando le tecnologie frontend più attuali.
               </p>
-              <h3>Cosa offriamo:</h3>
+              <h3>Competenze:</h3>
               <ul>
-                <li>Digital Strategy & Roadmap</li>
-                <li>Process Digitalization</li>
-                <li>Change Management</li>
-                <li>Digital Culture Training</li>
-                <li>Business Model Innovation</li>
+                <li>Angular 15+ (Standalone Components, RxJS)</li>
+                <li>TypeScript & Modern JavaScript</li>
+                <li>Responsive Design & Mobile First</li>
+                <li>CSS3, SCSS, Tailwind CSS</li>
+                <li>State Management (Signals, NgRx)</li>
+                <li>Web Accessibility (A11y)</li>
               </ul>
             </div>
             <div class="service-benefits">
-              <h3>Benefici:</h3>
+              <h3>Focus:</h3>
               <div class="benefit-list">
                 <div class="benefit">
                   <span class="benefit-icon">⚡</span>
-                  <span>Efficienza operativa +40%</span>
+                  <span>Performance Optimization</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">📱</span>
+                  <span>Mobile Responsive</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">♿</span>
+                  <span>Accessible & Inclusive</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Backend -->
+        <div class="service-detail" id="backend">
+          <div class="service-header">
+            <span class="service-icon">⚙️</span>
+            <h2>Backend Development</h2>
+          </div>
+          <div class="service-content">
+            <div class="service-text">
+              <p>
+                Sviluppo API robuste, scalabili e sicure con architetture moderne e best practices.
+              </p>
+              <h3>Competenze:</h3>
+              <ul>
+                <li>Node.js & Express.js</li>
+                <li>RESTful APIs & GraphQL</li>
+                <li>Database Design (SQL & NoSQL)</li>
+                <li>Authentication & Authorization</li>
+                <li>Microservices Architecture</li>
+                <li>API Documentation & Testing</li>
+              </ul>
+            </div>
+            <div class="service-benefits">
+              <h3>Focus:</h3>
+              <div class="benefit-list">
+                <div class="benefit">
+                  <span class="benefit-icon">🔒</span>
+                  <span>Security First</span>
                 </div>
                 <div class="benefit">
                   <span class="benefit-icon">📈</span>
-                  <span>Accelerazione time-to-market</span>
+                  <span>Scalable Design</span>
                 </div>
                 <div class="benefit">
-                  <span class="benefit-icon">💰</span>
-                  <span>Riduzione costi operativi</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Cloud & Infrastructure -->
-        <div class="service-detail" id="cloud">
-          <div class="service-header">
-            <span class="service-icon">☁️</span>
-            <h2>Cloud & Infrastructure</h2>
-          </div>
-          <div class="service-content">
-            <div class="service-text">
-              <p>
-                Sfrutta la scalabilità, flessibilità e riduzione dei costi del cloud computing. 
-                Dalla migrazione alla gestione, ti supportiamo in ogni fase.
-              </p>
-              <h3>Cosa offriamo:</h3>
-              <ul>
-                <li>Cloud Architecture & Design</li>
-                <li>Cloud Migration (Lift & Shift, Replatform)</li>
-                <li>Multi-cloud Strategy</li>
-                <li>Infrastructure as Code (IaC)</li>
-                <li>Cloud Cost Optimization</li>
-                <li>Managed Services</li>
-              </ul>
-            </div>
-            <div class="service-benefits">
-              <h3>Benefici:</h3>
-              <div class="benefit-list">
-                <div class="benefit">
-                  <span class="benefit-icon">🚀</span>
-                  <span>Scalabilità infinita</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">💰</span>
-                  <span>Riduzione CAPEX 60%</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">🌍</span>
-                  <span>Disponibilità globale</span>
+                  <span class="benefit-icon">🧪</span>
+                  <span>Well Tested Code</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- AI & Data -->
-        <div class="service-detail" id="ai">
+        <!-- Database & Data -->
+        <div class="service-detail" id="data">
           <div class="service-header">
-            <span class="service-icon">🤖</span>
-            <h2>Artificial Intelligence & Data</h2>
+            <span class="service-icon">💾</span>
+            <h2>Database & Data Solutions</h2>
           </div>
           <div class="service-content">
             <div class="service-text">
               <p>
-                I tuoi dati sono un asset strategico. Estrai valore con machine learning, 
-                analytics predittive e automazione intelligente.
+                Progetto e implemento database efficienti e ottimizzati, con focus su performance e data integrity.
               </p>
-              <h3>Cosa offriamo:</h3>
+              <h3>Competenze:</h3>
               <ul>
-                <li>Machine Learning Solutions</li>
-                <li>Predictive Analytics</li>
-                <li>Natural Language Processing (NLP)</li>
-                <li>Computer Vision</li>
-                <li>Data Engineering & Pipelines</li>
-                <li>Data Governance</li>
+                <li>PostgreSQL, MySQL, MariaDB</li>
+                <li>MongoDB, Firebase, Supabase</li>
+                <li>Database Design & Optimization</li>
+                <li>Data Modeling & ER Diagrams</li>
+                <li>Query Optimization</li>
+                <li>Backup & Disaster Recovery</li>
               </ul>
             </div>
             <div class="service-benefits">
-              <h3>Benefici:</h3>
+              <h3>Focus:</h3>
               <div class="benefit-list">
                 <div class="benefit">
-                  <span class="benefit-icon">🎯</span>
-                  <span>Decisioni data-driven</span>
+                  <span class="benefit-icon">⚡</span>
+                  <span>High Performance</span>
                 </div>
                 <div class="benefit">
-                  <span class="benefit-icon">⚙️</span>
-                  <span>Automazione processi</span>
+                  <span class="benefit-icon">🔐</span>
+                  <span>Data Protection</span>
                 </div>
                 <div class="benefit">
                   <span class="benefit-icon">📊</span>
-                  <span>Insights predittivi</span>
+                  <span>Optimal Indexing</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Cybersecurity -->
-        <div class="service-detail" id="cybersecurity">
+        <!-- DevOps & Cloud -->
+        <div class="service-detail" id="devops">
           <div class="service-header">
-            <span class="service-icon">🔒</span>
-            <h2>Cybersecurity</h2>
+            <span class="service-icon">☁️</span>
+            <h2>DevOps & Cloud Infrastructure</h2>
           </div>
           <div class="service-content">
             <div class="service-text">
               <p>
-                La sicurezza è fondamentale. Proteggiamo i tuoi asset digitali 
-                con strategie comprehensive di threat prevention e compliance.
+                Configuro e gestisco infrastrutture cloud moderne con CI/CD pipelines automatizzate.
               </p>
-              <h3>Cosa offriamo:</h3>
+              <h3>Competenze:</h3>
               <ul>
-                <li>Security Assessments</li>
-                <li>Vulnerability Management</li>
-                <li>Incident Response</li>
-                <li>Compliance & Audit (GDPR, ISO 27001)</li>
-                <li>Security Operations Center (SOC)</li>
-                <li>Penetration Testing</li>
+                <li>AWS (EC2, S3, Lambda, RDS)</li>
+                <li>Google Cloud Platform (GCP)</li>
+                <li>Docker & Container Orchestration</li>
+                <li>CI/CD (GitHub Actions, GitLab CI)</li>
+                <li>Infrastructure as Code (Terraform)</li>
+                <li>Monitoring & Logging</li>
               </ul>
             </div>
             <div class="service-benefits">
-              <h3>Benefici:</h3>
+              <h3>Focus:</h3>
               <div class="benefit-list">
+                <div class="benefit">
+                  <span class="benefit-icon">🚀</span>
+                  <span>Automated Deployment</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">💰</span>
+                  <span>Cost Optimization</span>
+                </div>
                 <div class="benefit">
                   <span class="benefit-icon">🛡️</span>
-                  <span>Protezione 24/7</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">✅</span>
-                  <span>Compliance garantito</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">🚨</span>
-                  <span>Response tempestiva</span>
+                  <span>High Availability</span>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- Application Development -->
-        <div class="service-detail" id="development">
+        <!-- Web & Full Stack -->
+        <div class="service-detail" id="fullstack">
           <div class="service-header">
-            <span class="service-icon">💻</span>
-            <h2>Application Development</h2>
+            <span class="service-icon">🌐</span>
+            <h2>Full-Stack Web Solutions</h2>
           </div>
           <div class="service-content">
             <div class="service-text">
               <p>
-                Software custom che risolve le tue sfide di business. 
-                Dall'ideazione al deployment, con metodologie agile.
+                Sviluppo end-to-end di applicazioni web complete, dal design alla deployment in production.
               </p>
-              <h3>Cosa offriamo:</h3>
+              <h3>Competenze:</h3>
               <ul>
-                <li>Web Application Development</li>
-                <li>Mobile App Development</li>
-                <li>API & Microservices</li>
-                <li>Legacy System Modernization</li>
-                <li>DevOps & CI/CD</li>
-                <li>Quality Assurance & Testing</li>
+                <li>Full-Stack Development</li>
+                <li>Progressive Web Apps (PWA)</li>
+                <li>E-commerce Solutions</li>
+                <li>CMS Integration</li>
+                <li>Web Performance Optimization</li>
+                <li>SEO Optimization</li>
               </ul>
             </div>
             <div class="service-benefits">
-              <h3>Benefici:</h3>
+              <h3>Focus:</h3>
               <div class="benefit-list">
-                <div class="benefit">
-                  <span class="benefit-icon">⚡</span>
-                  <span>Time-to-market rapido</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">🔄</span>
-                  <span>Scalabilità garantita</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">🎨</span>
-                  <span>UX/UI ottimale</span>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <!-- Consulting & Strategy -->
-        <div class="service-detail" id="consulting">
-          <div class="service-header">
-            <span class="service-icon">📊</span>
-            <h2>Consulting & Strategy</h2>
-          </div>
-          <div class="service-content">
-            <div class="service-text">
-              <p>
-                Allinea IT e business. Sviluppiamo strategie technology che 
-                accelerano la crescita e creano competitive advantage.
-              </p>
-              <h3>Cosa offriamo:</h3>
-              <ul>
-                <li>IT Strategy & Planning</li>
-                <li>Enterprise Architecture</li>
-                <li>Technology Assessment</li>
-                <li>Cost Optimization</li>
-                <li>Vendor Management</li>
-                <li>Digital Maturity Assessment</li>
-              </ul>
-            </div>
-            <div class="service-benefits">
-              <h3>Benefici:</h3>
-              <div class="benefit-list">
-                <div class="benefit">
-                  <span class="benefit-icon">🎯</span>
-                  <span>Roadmap chiara</span>
-                </div>
-                <div class="benefit">
-                  <span class="benefit-icon">💡</span>
-                  <span>Innovazione strategica</span>
-                </div>
                 <div class="benefit">
                   <span class="benefit-icon">📈</span>
-                  <span>ROI massimizzato</span>
+                  <span>Business Growth</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">⚡</span>
+                  <span>Fast Load Times</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">🔍</span>
+                  <span>SEO Ready</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Consulting & Code Review -->
+        <div class="service-detail" id="consulting">
+          <div class="service-header">
+            <span class="service-icon">👨‍💻</span>
+            <h2>Consulting & Code Review</h2>
+          </div>
+          <div class="service-content">
+            <div class="service-text">
+              <p>
+                Assisto progetti esistenti con code review, ottimizzazione e mentoring del team tecnico.
+              </p>
+              <h3>Competenze:</h3>
+              <ul>
+                <li>Technical Code Review</li>
+                <li>Architecture Assessment</li>
+                <li>Performance Profiling & Optimization</li>
+                <li>Technical Documentation</li>
+                <li>Team Mentoring & Training</li>
+                <li>Best Practices Implementation</li>
+              </ul>
+            </div>
+            <div class="service-benefits">
+              <h3>Focus:</h3>
+              <div class="benefit-list">
+                <div class="benefit">
+                  <span class="benefit-icon">✅</span>
+                  <span>Code Quality</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">📚</span>
+                  <span>Knowledge Transfer</span>
+                </div>
+                <div class="benefit">
+                  <span class="benefit-icon">🎯</span>
+                  <span>Best Practices</span>
                 </div>
               </div>
             </div>
@@ -284,25 +278,25 @@ import { takeUntil } from 'rxjs/operators';
     <!-- Engagement Models -->
     <section class="engagement-models">
       <div class="container">
-        <h2>Modelli di Engagement</h2>
-        <p class="section-subtitle">Flessibilità nel come lavoriamo insieme</p>
+        <h2>Modalità di Collaborazione</h2>
+        <p class="section-subtitle">Flessibilità nel come lavorare insieme</p>
         
         <div class="models-grid">
           <div class="model-card">
-            <h3>Project Based</h3>
-            <p>Scope definito e tempistica chiara per progetti specifici.</p>
+            <h3>Progetti Specifici</h3>
+            <p>Scope definito e timeline chiara per progetti web e software custom.</p>
           </div>
           <div class="model-card">
-            <h3>Time & Materials</h3>
-            <p>Flessibilità per progetti con requisiti in evoluzione.</p>
+            <h3>Contratti Orari</h3>
+            <p>Flessibilità oraria per lavori con requisiti in evoluzione o supporto continuativo.</p>
           </div>
           <div class="model-card">
-            <h3>Managed Services</h3>
-            <p>Supporto continuativo e manutenzione delle tue soluzioni.</p>
+            <h3>Consulenza Tecnica</h3>
+            <p>Supporto ad progetto per code review, architettura e ottimizzazioni.</p>
           </div>
           <div class="model-card">
-            <h3>Staff Augmentation</h3>
-            <p>Estendi il tuo team con i nostri esperti certificati.</p>
+            <h3>Mentoring & Training</h3>
+            <p>Affiancamento del team e formazione su tecnologie e best practices.</p>
           </div>
         </div>
       </div>
@@ -311,10 +305,10 @@ import { takeUntil } from 'rxjs/operators';
     <!-- CTA -->
     <section class="services-cta">
       <div class="container">
-        <h2>Pronto ad iniziare?</h2>
-        <p>Contattaci per una consulenza gratuita sui tuoi bisogni specifici</p>
+        <h2>Hai un progetto interessante?</h2>
+        <p>Contattami per discutere come posso aiutare il tuo progetto</p>
         <a routerLink="/contatti" class="btn-primary">
-          Richiedi una consulenza
+          Iniziamo una collaborazione
           <span class="arrow">→</span>
         </a>
       </div>
@@ -339,6 +333,11 @@ export class ServicesComponent implements OnInit, OnDestroy {
 
   ngOnInit(): void {
     this.metaService.setServicesPageMeta();
+  }
+
+  // Helper method for translations
+  t(key: string): string {
+    return this.translationService.translate(key);
   }
 
   ngOnDestroy(): void {

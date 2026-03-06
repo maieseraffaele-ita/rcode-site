@@ -255,6 +255,229 @@ $border-color: #e9ecef;
   }
 }
 
+// Status Description
+.status-description {
+  text-align: center;
+  font-size: 1.05rem;
+  color: $text-light;
+  margin-bottom: 3rem;
+  line-height: 1.7;
+}
+
+// Expertise Level
+.expertise-level {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+
+  .level-bar {
+    height: 6px;
+    background: linear-gradient(90deg, $accent-color, rgba(0, 102, 204, 0.3));
+    border-radius: 3px;
+    flex: 1;
+  }
+
+  span {
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: $accent-color;
+    min-width: 50px;
+  }
+}
+
+// Skill Icon
+.skill-icon {
+  font-size: 2rem;
+  display: block;
+  margin-bottom: 1rem;
+}
+
+// Experience Timeline
+.experience-timeline {
+  position: relative;
+  padding: 2rem 0;
+
+  &::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 2px;
+    height: 100%;
+    background: linear-gradient(180deg, $accent-color, rgba(0, 102, 204, 0.2));
+
+    @media (max-width: 768px) {
+      left: 20px;
+    }
+  }
+
+  .timeline-entry {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    margin-bottom: 3rem;
+    position: relative;
+
+    @media (max-width: 768px) {
+      grid-template-columns: 1fr;
+      padding-left: 60px;
+      gap: 1rem;
+
+      &::before {
+        left: 20px;
+        top: 0;
+      }
+    }
+
+    &:nth-child(odd) {
+      .timeline-content {
+        grid-column: 2;
+
+        @media (max-width: 768px) {
+          grid-column: 1;
+        }
+      }
+    }
+
+    &:nth-child(even) {
+      .timeline-date {
+        text-align: right;
+
+        @media (max-width: 768px) {
+          text-align: left;
+        }
+      }
+
+      .timeline-content {
+        grid-column: 1;
+
+        @media (max-width: 768px) {
+          grid-column: 1;
+        }
+      }
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 14px;
+      height: 14px;
+      background: white;
+      border: 3px solid $accent-color;
+      border-radius: 50%;
+      top: 10px;
+
+      @media (max-width: 768px) {
+        left: 20px;
+      }
+    }
+  }
+
+  .timeline-date {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: $accent-color;
+    padding: 1rem;
+  }
+
+  .timeline-content {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 12px;
+    border: 2px solid $border-color;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $accent-color;
+      box-shadow: 0 8px 24px rgba(0, 102, 204, 0.15);
+    }
+
+    h3 {
+      font-size: 1.1rem;
+      color: $primary-color;
+      margin: 0 0 0.5rem 0;
+    }
+
+    p {
+      color: $text-light;
+      margin: 0;
+      font-size: 0.95rem;
+    }
+  }
+}
+
+// Models Section
+.models-section {
+  padding: 4rem 0;
+  background: $light-bg;
+
+  h2 {
+    font-size: 2.2rem;
+    color: $primary-color;
+    text-align: center;
+    margin-bottom: 3rem;
+  }
+}
+
+.models-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    grid-template-columns: 1fr;
+  }
+
+  .model-card {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    border: 2px solid $border-color;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    transition: all 0.3s ease;
+
+    &:hover {
+      border-color: $accent-color;
+      box-shadow: 0 12px 30px rgba(0, 102, 204, 0.15);
+      transform: translateY(-4px);
+    }
+
+    .model-icon {
+      font-size: 2.5rem;
+      display: block;
+    }
+
+    h3 {
+      font-size: 1.25rem;
+      color: $primary-color;
+      margin: 0;
+    }
+
+    p {
+      color: $text-light;
+      margin: 0;
+      flex-grow: 1;
+      line-height: 1.6;
+    }
+
+    .model-tag {
+      display: inline-block;
+      padding: 0.5rem 1rem;
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 26, 77, 0.1));
+      border: 1px solid rgba(0, 102, 204, 0.3);
+      border-radius: 6px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      color: $accent-color;
+    }
+  }
+}
+
 .careers-cta {
   background: linear-gradient(135deg, $primary-color, $secondary-color);
   color: white;

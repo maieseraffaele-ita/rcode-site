@@ -31,41 +31,41 @@ export class TranslationService {
     it: {
       // Header & Navigation
       'nav.home': 'Home',
-      'nav.about': 'Chi Siamo',
-      'nav.services': 'Servizi',
-      'nav.industries': 'Industrie',
-      'nav.careers': 'Carriera',
+      'nav.about': 'Chi Sono',
+      'nav.services': 'Competenze',
+      'nav.industries': 'Portfolio',
+      'nav.careers': 'Opportunità',
       'nav.contact': 'Contatti',
       'nav.request_consultation': 'Richiedi Consulenza',
       'nav.join_team': 'Unisciti al team',
       
       // Homepage
-      'home.hero_title': 'Trasforma il tuo business',
-      'home.hero_title_gradient': 'con la giusta tecnologia',
-      'home.hero_subtitle': 'Partner strategico per la trasformazione digitale. Combiniamo competenza tecnologica, innovazione e risultati misurabili per accelerare la crescita della tua azienda.',
-      'home.hero_cta_primary': 'Richiedi una consulenza gratuita',
-      'home.hero_cta_secondary': 'Scopri di più su di noi',
-      'home.hero_stat_1': '500+',
+      'home.hero_title': 'Full-stack Developer',
+      'home.hero_title_gradient': 'Specializzato in Web & Cloud',
+      'home.hero_subtitle': 'Creo soluzioni software di qualità, dalle API backend alle interfacce frontend responsive. Appassionato di clean code, architetture scalabili e best practices.',
+      'home.hero_cta_primary': 'Contattami per un progetto',
+      'home.hero_cta_secondary': 'Scopri il mio portfolio',
+      'home.hero_stat_1': '50+',
       'home.hero_stat_1_label': 'Progetti completati',
-      'home.hero_stat_2': '15+',
-      'home.hero_stat_2_label': 'Anni di esperienza',
-      'home.hero_stat_3': '98%',
-      'home.hero_stat_3_label': 'Client satisfaction',
+      'home.hero_stat_2': '8+',
+      'home.hero_stat_2_label': 'Anni di programmazione',
+      'home.hero_stat_3': '100%',
+      'home.hero_stat_3_label': 'Impegno nel progetto',
       
       // Value Proposition
-      'home.vp_title': 'Perché scegliere RCODE?',
-      'home.vp_subtitle': 'Tre pilastri che guidano il nostro approccio strategico',
-      'home.vp_card_1_title': 'Risultati Misurabili',
-      'home.vp_card_1_text': 'Ogni progetto è strutturato con KPI chiari e ROI tracciabile. Non proponiamo solo soluzioni: proponiamo crescita quantificabile.',
-      'home.vp_card_2_title': 'Competenza Tecnica',
-      'home.vp_card_2_text': 'Team di esperti certificati con expertise in cloud, AI, cybersecurity e sviluppo applicazioni enterprise.',
-      'home.vp_card_3_title': 'Innovazione Continua',
-      'home.vp_card_3_text': 'Rimaniamo sempre ai vertici delle nuove tecnologie. La trasformazione digitale non è una destinazione, è un percorso.',
+      'home.vp_title': 'Perché scegliere me?',
+      'home.vp_subtitle': 'Tre punti di forza del mio approccio',
+      'home.vp_card_1_title': 'Clean Code',
+      'home.vp_card_1_text': 'Scrivo codice leggibile, mantenibile e testato. Ogni soluzione è strutturata per essere scalabile e facilmente extensible nel tempo.',
+      'home.vp_card_2_title': 'Tech Stack Moderno',
+      'home.vp_card_2_text': 'Expertise in Angular, TypeScript, Node.js, SQL e cloud (AWS/GCP). Aggiornato costantemente sulle nuove tecnologie.',
+      'home.vp_card_3_title': 'Problem Solving',
+      'home.vp_card_3_text': 'Affronto ogni progetto con una mentalità di problem solving. Non solo codifico: analizzo, progetto e ottimizo.',
       
       // Services Overview
-      'home.services_title': 'I nostri servizi principali',
-      'home.services_subtitle': 'Soluzioni complete per la trasformazione digitale del tuo business',
-      'home.services_cta': 'Esplora tutti i servizi',
+      'home.services_title': 'Le mie competenze principali',
+      'home.services_subtitle': 'Teknologie e aree di expertise su cui mi concentro',
+      'home.services_cta': 'Scopri tutte le competenze',
       
       'service.digital_transformation': 'Trasformazione Digitale',
       'service.digital_transformation_desc': 'Ripensa i tuoi processi con tecnologie moderne. Dalla strategia all\'implementazione, ti guidiamo in ogni fase.',
@@ -112,16 +112,25 @@ export class TranslationService {
       'industries.cta_title': 'Non trovi il tuo settore?',
       'industries.cta_subtitle': 'Contiamo su esperienza cross-sector per portare innovazione a qualsiasi industria',
       
-      // Careers Page
-      'careers.hero_title': 'Lavora con noi',
-      'careers.hero_subtitle': 'Costruiamo il futuro della tecnologia con talenti straordinari',
-      'careers.culture_title': 'La nostra cultura',
-      'careers.positions_title': 'Posizioni Aperte',
-      'careers.benefits_title': 'Cosa offriamo',
-      'careers.cta_title': 'Non hai trovato la posizione giusta?',
-      'careers.cta_subtitle': 'Inviaci il tuo CV per opportunità future',
-      'careers.view_offers': 'Vedi le nostre offerte',
-      'careers.join_us': 'Unisciti a RCODE',
+      // Portfolio Page (Projects)
+      'portfolio.hero_title': 'Portfolio',
+      'portfolio.hero_subtitle': 'Progetti che ho realizzato e storie di successo',
+      'portfolio.featured_projects': 'Progetti In Evidenza',
+      'portfolio.all_projects': 'Tutti i Progetti',
+      'portfolio.view_project': 'Vedi Progetto',
+      'portfolio.tech_stack': 'Tech Stack',
+
+      // Careers/Open to work Page
+      'careers.hero_title': 'Disponibile per Collaborazioni',
+      'careers.hero_subtitle': 'Cerco nuove sfide e opportunità interessanti',
+      'careers.status_title': 'Lo Stato Attuale',
+      'careers.status_description': 'Sono disponibile per progetti freelance, contract e opportunità full-time. Mi piace lavorare su sfide tecniche interessanti con team appassionati.',
+      'careers.skills_title': 'Competenze Principali',
+      'careers.experience_title': 'Esperienza',
+      'careers.cta_title': 'Hai un progetto interessante?',
+      'careers.cta_subtitle': 'Contattami per discutere una possibile collaborazione',
+      'careers.view_offers': 'Contattami',
+      'careers.join_us': 'Collaboriamo',
       
       // Contact Page
       'contact.hero_title': 'Contattaci',
@@ -155,7 +164,7 @@ export class TranslationService {
       'contact.location_map_description': 'Mappa interattiva con le nostre sedi',
       
       // Footer
-      'footer.company_description': 'Partner strategico per la trasformazione digitale delle tue aziende. Innovazione, affidabilità e risultati misurabili.',
+      'footer.company_description': 'Full-stack developer appassionato di clean code e architetture scalabili. Trasformo idee in soluzioni software di qualità.',
       'footer.services': 'Servizi',
       'footer.company': 'Azienda',
       'footer.legal': 'Legal',
@@ -165,51 +174,67 @@ export class TranslationService {
       'footer.gdpr': 'GDPR Compliant',
       'footer.iso': 'ISO 27001',
       'footer.enterprise': 'Enterprise Ready',
-      
+
+      // Cookie Banner
+      'cookie.preferences': 'Preferenze Cookie',
+      'cookie.description': 'Utilizziamo cookie per migliorare la tua esperienza di navigazione, personalizzare i contenuti e analizzare il traffico del sito.',
+      'cookie.learn_more': 'Scopri di più',
+      'cookie.necessary_title': 'Cookie Tecnici (Necessari)',
+      'cookie.necessary_desc': 'Sempre abilitati per il funzionamento del sito',
+      'cookie.analytics_title': 'Cookie Analytics',
+      'cookie.analytics_desc': 'Ci aiutano a capire come utilizzi il sito',
+      'cookie.marketing_title': 'Cookie Marketing',
+      'cookie.marketing_desc': 'Utilizzati per mostrarti annunci personalizzati',
+      'cookie.show_details': 'Mostra dettagli',
+      'cookie.hide_details': 'Nascondi dettagli',
+      'cookie.reject_all': 'Rifiuta Tutto',
+      'cookie.accept_all': 'Accetta Tutto',
+      'cookie.gdpr_compliance': 'Conformità a',
+
       // Language selector
       'language.italian': 'Italiano',
       'language.english': 'English',
       'language.german': 'Deutsch',
     },
-    
+
     en: {
       // Header & Navigation
       'nav.home': 'Home',
-      'nav.about': 'About Us',
-      'nav.services': 'Services',
-      'nav.industries': 'Industries',
-      'nav.careers': 'Careers',
+      'nav.about': 'About Me',
+      'nav.services': 'Skills',
+      'nav.industries': 'Portfolio',
+      'nav.careers': 'Opportunities',
       'nav.contact': 'Contact',
       'nav.request_consultation': 'Request Consultation',
       'nav.join_team': 'Join the Team',
       
       // Homepage
-      'home.hero_title': 'Transform your business',
-      'home.hero_title_gradient': 'with the right technology',
-      'home.hero_subtitle': 'Strategic partner for digital transformation. We combine technical expertise, innovation and measurable results to accelerate your company\'s growth.',
-      'home.hero_cta_primary': 'Request a free consultation',
-      'home.hero_cta_secondary': 'Learn more about us',
-      'home.hero_stat_1': '500+',
+      'home.hero_title': 'Full-stack Developer',
+      'home.hero_title_gradient': 'Specialized in Web & Cloud',
+      'home.hero_subtitle': 'I create quality software solutions, from backend APIs to responsive frontend interfaces. Passionate about clean code, scalable architectures and best practices.',
+      'home.hero_cta_primary': 'Contact me for a project',
+      'home.hero_cta_secondary': 'Discover my portfolio',
+      'home.hero_stat_1': '50+',
       'home.hero_stat_1_label': 'Projects completed',
-      'home.hero_stat_2': '15+',
-      'home.hero_stat_2_label': 'Years of experience',
-      'home.hero_stat_3': '98%',
-      'home.hero_stat_3_label': 'Client satisfaction',
+      'home.hero_stat_2': '8+',
+      'home.hero_stat_2_label': 'Years of coding',
+      'home.hero_stat_3': '100%',
+      'home.hero_stat_3_label': 'Project commitment',
       
       // Value Proposition
-      'home.vp_title': 'Why choose RCODE?',
-      'home.vp_subtitle': 'Three pillars that guide our strategic approach',
-      'home.vp_card_1_title': 'Measurable Results',
-      'home.vp_card_1_text': 'Every project is structured with clear KPIs and traceable ROI. We don\'t just offer solutions: we offer quantifiable growth.',
-      'home.vp_card_2_title': 'Technical Expertise',
-      'home.vp_card_2_text': 'Team of certified experts with expertise in cloud, AI, cybersecurity and enterprise application development.',
-      'home.vp_card_3_title': 'Continuous Innovation',
-      'home.vp_card_3_text': 'We always stay at the forefront of new technologies. Digital transformation is not a destination, it\'s a journey.',
+      'home.vp_title': 'Why choose me?',
+      'home.vp_subtitle': 'Three strengths of my approach',
+      'home.vp_card_1_title': 'Clean Code',
+      'home.vp_card_1_text': 'I write readable, maintainable and tested code. Every solution is structured to be scalable and easily extensible over time.',
+      'home.vp_card_2_title': 'Modern Tech Stack',
+      'home.vp_card_2_text': 'Expertise in Angular, TypeScript, Node.js, SQL and cloud (AWS/GCP). Constantly updated on new technologies.',
+      'home.vp_card_3_title': 'Problem Solving',
+      'home.vp_card_3_text': 'I approach every project with a problem-solving mindset. Not just coding: analyzing, designing and optimizing.',
       
       // Services Overview
-      'home.services_title': 'Our main services',
-      'home.services_subtitle': 'Complete solutions for your digital transformation',
-      'home.services_cta': 'Explore all services',
+      'home.services_title': 'My core skills',
+      'home.services_subtitle': 'Technologies and areas of expertise I focus on',
+      'home.services_cta': 'Discover all skills',
       
       'service.digital_transformation': 'Digital Transformation',
       'service.digital_transformation_desc': 'Rethink your processes with modern technologies. From strategy to implementation, we guide you at every stage.',
@@ -256,16 +281,25 @@ export class TranslationService {
       'industries.cta_title': 'Can\'t find your sector?',
       'industries.cta_subtitle': 'We rely on cross-sector experience to bring innovation to any industry',
       
-      // Careers Page
-      'careers.hero_title': 'Work with us',
-      'careers.hero_subtitle': 'Building the future of technology with extraordinary talent',
-      'careers.culture_title': 'Our culture',
-      'careers.positions_title': 'Open Positions',
-      'careers.benefits_title': 'What we offer',
-      'careers.cta_title': 'Haven\'t found the right position?',
-      'careers.cta_subtitle': 'Send us your CV for future opportunities',
-      'careers.view_offers': 'View our offers',
-      'careers.join_us': 'Join RCODE',
+      // Portfolio Page (Projects)
+      'portfolio.hero_title': 'Portfolio',
+      'portfolio.hero_subtitle': 'Projects I\'ve built and success stories',
+      'portfolio.featured_projects': 'Featured Projects',
+      'portfolio.all_projects': 'All Projects',
+      'portfolio.view_project': 'View Project',
+      'portfolio.tech_stack': 'Tech Stack',
+
+      // Careers/Open to work Page
+      'careers.hero_title': 'Available for Collaborations',
+      'careers.hero_subtitle': 'Looking for new challenges and interesting opportunities',
+      'careers.status_title': 'Current Status',
+      'careers.status_description': 'I\'m available for freelance projects, contracts and full-time opportunities. I love working on interesting technical challenges with passionate teams.',
+      'careers.skills_title': 'Core Skills',
+      'careers.experience_title': 'Experience',
+      'careers.cta_title': 'Have an interesting project?',
+      'careers.cta_subtitle': 'Contact me to discuss a possible collaboration',
+      'careers.view_offers': 'Contact Me',
+      'careers.join_us': 'Let\'s Collaborate',
       
       // Contact Page
       'contact.hero_title': 'Contact Us',
@@ -299,7 +333,7 @@ export class TranslationService {
       'contact.location_map_description': 'Interactive map with our locations',
       
       // Footer
-      'footer.company_description': 'Strategic partner for digital transformation of your companies. Innovation, reliability and measurable results.',
+      'footer.company_description': 'Passionate full-stack developer focused on clean code and scalable architectures. I transform ideas into quality software solutions.',
       'footer.services': 'Services',
       'footer.company': 'Company',
       'footer.legal': 'Legal',
@@ -309,51 +343,67 @@ export class TranslationService {
       'footer.gdpr': 'GDPR Compliant',
       'footer.iso': 'ISO 27001',
       'footer.enterprise': 'Enterprise Ready',
-      
+
+      // Cookie Banner
+      'cookie.preferences': 'Cookie Preferences',
+      'cookie.description': 'We use cookies to improve your browsing experience, personalize content and analyze site traffic.',
+      'cookie.learn_more': 'Learn more',
+      'cookie.necessary_title': 'Technical Cookies (Required)',
+      'cookie.necessary_desc': 'Always enabled for site functionality',
+      'cookie.analytics_title': 'Analytics Cookies',
+      'cookie.analytics_desc': 'Help us understand how you use the site',
+      'cookie.marketing_title': 'Marketing Cookies',
+      'cookie.marketing_desc': 'Used to show you personalized ads',
+      'cookie.show_details': 'Show details',
+      'cookie.hide_details': 'Hide details',
+      'cookie.reject_all': 'Reject All',
+      'cookie.accept_all': 'Accept All',
+      'cookie.gdpr_compliance': 'Compliant with',
+
       // Language selector
       'language.italian': 'Italian',
       'language.english': 'English',
       'language.german': 'German',
     },
-    
+
     de: {
       // Header & Navigation
       'nav.home': 'Startseite',
-      'nav.about': 'Über uns',
-      'nav.services': 'Dienstleistungen',
-      'nav.industries': 'Industrien',
-      'nav.careers': 'Karriere',
+      'nav.about': 'Über mich',
+      'nav.services': 'Fähigkeiten',
+      'nav.industries': 'Portfolio',
+      'nav.careers': 'Möglichkeiten',
       'nav.contact': 'Kontakt',
       'nav.request_consultation': 'Beratung anfordern',
       'nav.join_team': 'Team beitreten',
       
       // Homepage
-      'home.hero_title': 'Transformieren Sie Ihr Geschäft',
-      'home.hero_title_gradient': 'mit der richtigen Technologie',
-      'home.hero_subtitle': 'Strategischer Partner für digitale Transformation. Wir kombinieren technisches Fachwissen, Innovation und messbare Ergebnisse, um das Wachstum Ihres Unternehmens zu beschleunigen.',
-      'home.hero_cta_primary': 'Kostenlose Beratung anfordern',
-      'home.hero_cta_secondary': 'Mehr über uns erfahren',
-      'home.hero_stat_1': '500+',
-      'home.hero_stat_1_label': 'Abgeschlossene Projekte',
-      'home.hero_stat_2': '15+',
-      'home.hero_stat_2_label': 'Jahre Erfahrung',
-      'home.hero_stat_3': '98%',
-      'home.hero_stat_3_label': 'Kundenzufriedenheit',
+      'home.hero_title': 'Full-Stack-Entwickler',
+      'home.hero_title_gradient': 'Spezialisiert auf Web & Cloud',
+      'home.hero_subtitle': 'Ich erstelle hochwertige Softwarelösungen von Backend-APIs bis zu responsiven Frontend-Schnittstellen. Leidenschaftlich um sauberen Code, skalierbare Architekturen und Best Practices.',
+      'home.hero_cta_primary': 'Kontaktiere mich für ein Projekt',
+      'home.hero_cta_secondary': 'Entdecke mein Portfolio',
+      'home.hero_stat_1': '50+',
+      'home.hero_stat_1_label': 'Projekte abgeschlossen',
+      'home.hero_stat_2': '8+',
+      'home.hero_stat_2_label': 'Jahre Programmierung',
+      'home.hero_stat_3': '100%',
+      'home.hero_stat_3_label': 'Projektverpflichtung',
       
       // Value Proposition
-      'home.vp_title': 'Warum RCODE wählen?',
-      'home.vp_subtitle': 'Drei Säulen, die unseren strategischen Ansatz leiten',
-      'home.vp_card_1_title': 'Messbare Ergebnisse',
-      'home.vp_card_1_text': 'Jedes Projekt ist mit klaren KPIs und nachverfolgbarem ROI strukturiert. Wir bieten nicht nur Lösungen: wir bieten quantifizierbares Wachstum.',
-      'home.vp_card_2_title': 'Technische Kompetenz',
-      'home.vp_card_2_text': 'Team von zertifizierten Experten mit Fachwissen in Cloud, KI, Cybersicherheit und Enterprise-Anwendungsentwicklung.',
-      'home.vp_card_3_title': 'Kontinuierliche Innovation',
-      'home.vp_card_3_text': 'Wir bleiben immer an der Spitze neuer Technologien. Digitale Transformation ist nicht das Ziel, sondern eine Reise.',
+      'home.vp_title': 'Warum mich wählen?',
+      'home.vp_subtitle': 'Drei Stärken meines Ansatzes',
+      'home.vp_card_1_title': 'Sauberer Code',
+      'home.vp_card_1_text': 'Ich schreibe lesbaren, wartbaren und getesteten Code. Jede Lösung ist strukturiert, um im Laufe der Zeit skalierbar und leicht erweiterbar zu sein.',
+      'home.vp_card_2_title': 'Moderner Tech Stack',
+      'home.vp_card_2_text': 'Expertise in Angular, TypeScript, Node.js, SQL und Cloud (AWS/GCP). Ständig aktualisiert über neue Technologien.',
+      'home.vp_card_3_title': 'Problemlösung',
+      'home.vp_card_3_text': 'Ich gehe jedes Projekt mit einer Problemlösungsmentalität an. Nicht nur Programmieren: Analysieren, Entwerfen und Optimieren.',
       
       // Services Overview
-      'home.services_title': 'Unsere wichtigsten Dienstleistungen',
-      'home.services_subtitle': 'Umfassende Lösungen für Ihre digitale Transformation',
-      'home.services_cta': 'Alle Dienstleistungen erkunden',
+      'home.services_title': 'Meine Kernkompetenzen',
+      'home.services_subtitle': 'Technologien und Fachbereiche, auf die ich mich konzentriere',
+      'home.services_cta': 'Entdecke alle Fähigkeiten',
       
       'service.digital_transformation': 'Digitale Transformation',
       'service.digital_transformation_desc': 'Überdenken Sie Ihre Prozesse mit modernen Technologien. Von der Strategie zur Implementierung, wir begleiten Sie in jeder Phase.',
@@ -400,16 +450,25 @@ export class TranslationService {
       'industries.cta_title': 'Können Sie Ihren Sektor nicht finden?',
       'industries.cta_subtitle': 'Wir verlassen uns auf branchenübergreifende Erfahrung, um Innovation in jede Industrie zu bringen',
       
-      // Careers Page
-      'careers.hero_title': 'Arbeiten Sie mit uns',
-      'careers.hero_subtitle': 'Wir bauen die Zukunft der Technologie mit außergewöhnlichen Talenten',
-      'careers.culture_title': 'Unsere Kultur',
-      'careers.positions_title': 'Offene Positionen',
-      'careers.benefits_title': 'Was wir anbieten',
-      'careers.cta_title': 'Haben Sie die richtige Position nicht gefunden?',
-      'careers.cta_subtitle': 'Senden Sie uns Ihren Lebenslauf für zukünftige Möglichkeiten',
-      'careers.view_offers': 'Unsere Angebote sehen',
-      'careers.join_us': 'RCODE beitreten',
+      // Portfolio Page (Projects)
+      'portfolio.hero_title': 'Portfolio',
+      'portfolio.hero_subtitle': 'Projekte, die ich gebaut habe und Erfolgsgeschichten',
+      'portfolio.featured_projects': 'Ausgewählte Projekte',
+      'portfolio.all_projects': 'Alle Projekte',
+      'portfolio.view_project': 'Projekt anzeigen',
+      'portfolio.tech_stack': 'Tech Stack',
+
+      // Careers/Open to work Page
+      'careers.hero_title': 'Verfügbar für Zusammenarbeit',
+      'careers.hero_subtitle': 'Auf der Suche nach neuen Herausforderungen und interessanten Möglichkeiten',
+      'careers.status_title': 'Aktueller Status',
+      'careers.status_description': 'Ich bin verfügbar für Freiberufler-Projekte, Verträge und Vollzeitpositionen. Ich liebe es, an interessanten technischen Herausforderungen mit leidenschaftlichen Teams zu arbeiten.',
+      'careers.skills_title': 'Kernkompetenzen',
+      'careers.experience_title': 'Erfahrung',
+      'careers.cta_title': 'Haben Sie ein interessantes Projekt?',
+      'careers.cta_subtitle': 'Kontaktieren Sie mich, um eine mögliche Zusammenarbeit zu besprechen',
+      'careers.view_offers': 'Kontakt',
+      'careers.join_us': 'Lassen Sie uns zusammenarbeiten',
       
       // Contact Page
       'contact.hero_title': 'Kontaktieren Sie uns',
@@ -443,7 +502,7 @@ export class TranslationService {
       'contact.location_map_description': 'Interaktive Karte mit unseren Standorten',
       
       // Footer
-      'footer.company_description': 'Strategischer Partner für digitale Transformation Ihrer Unternehmen. Innovation, Zuverlässigkeit und messbare Ergebnisse.',
+      'footer.company_description': 'Leidenschaftlicher Full-Stack-Entwickler, konzentriert auf sauberen Code und skalierbare Architekturen. Ich transformiere Ideen in hochwertige Softwarelösungen.',
       'footer.services': 'Dienstleistungen',
       'footer.company': 'Unternehmen',
       'footer.legal': 'Rechtliches',
@@ -453,7 +512,23 @@ export class TranslationService {
       'footer.gdpr': 'DSGVO konform',
       'footer.iso': 'ISO 27001',
       'footer.enterprise': 'Enterprise Ready',
-      
+
+      // Cookie Banner
+      'cookie.preferences': 'Cookie-Einstellungen',
+      'cookie.description': 'Wir verwenden Cookies, um Ihr Browsererlebnis zu verbessern, Inhalte zu personalisieren und Website-Traffic zu analysieren.',
+      'cookie.learn_more': 'Mehr erfahren',
+      'cookie.necessary_title': 'Technische Cookies (Erforderlich)',
+      'cookie.necessary_desc': 'Immer aktiviert für die Website-Funktionalität',
+      'cookie.analytics_title': 'Analytics-Cookies',
+      'cookie.analytics_desc': 'Helfen uns zu verstehen, wie Sie die Website nutzen',
+      'cookie.marketing_title': 'Marketing-Cookies',
+      'cookie.marketing_desc': 'Werden verwendet, um Ihnen personalisierte Anzeigen zu zeigen',
+      'cookie.show_details': 'Details anzeigen',
+      'cookie.hide_details': 'Details ausblenden',
+      'cookie.reject_all': 'Alle ablehnen',
+      'cookie.accept_all': 'Alle akzeptieren',
+      'cookie.gdpr_compliance': 'Konform mit',
+
       // Language selector
       'language.italian': 'Italiano',
       'language.english': 'English',
