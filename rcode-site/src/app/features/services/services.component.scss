@@ -251,7 +251,7 @@ $border-color: #e9ecef;
     gap: 0.5rem;
     padding: 1rem 2rem;
     background: $accent-color;
-    color: $primary-color;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
@@ -259,8 +259,8 @@ $border-color: #e9ecef;
     transition: all 0.3s ease;
 
     &:hover {
-      transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+      transform: translateY(-3px);;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
   }
 }

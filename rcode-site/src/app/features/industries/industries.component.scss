@@ -146,18 +146,19 @@ $border-color: #e9ecef;
       .tech-badge {
         display: inline-block;
         padding: 0.4rem 1rem;
-        background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 26, 77, 0.1));
-        border: 1px solid rgba(0, 102, 204, 0.3);
+        background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 26, 77, 0.15));
+        border: 1px solid rgba(0, 102, 204, 0.4);
         border-radius: 20px;
         font-size: 0.85rem;
-        font-weight: 600;
-        color: $accent-color;
+        font-weight: 700;
+        color: #003d7a;
         transition: all 0.3s ease;
 
         &:hover {
-          background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(0, 26, 77, 0.2));
-          border-color: rgba(0, 102, 204, 0.5);
+          background: linear-gradient(135deg, rgba(0, 102, 204, 0.25), rgba(0, 26, 77, 0.25));
+          border-color: rgba(0, 102, 204, 0.6);
           transform: translateY(-2px);
+          color: #001a4d;
         }
       }
     }
@@ -188,7 +189,7 @@ $border-color: #e9ecef;
     gap: 0.5rem;
     padding: 1rem 2rem;
     background: $accent-color;
-    color: $primary-color;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
@@ -197,7 +198,7 @@ $border-color: #e9ecef;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
   }
 }

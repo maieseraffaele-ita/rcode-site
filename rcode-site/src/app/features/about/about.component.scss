@@ -139,7 +139,7 @@ $border-color: #e9ecef;
 
   &.primary {
     border-color: $accent-color;
-    background: rgba(0, 102, 204, 0.05);
+    background: rgba(0, 102, 204, 0.08);
   }
 
   &:hover {
@@ -150,8 +150,12 @@ $border-color: #e9ecef;
 
   h3 {
     font-size: 1.5rem;
-    color: $primary-color;
+    color: $text-dark;
     margin: 0 0 1rem 0;
+  }
+
+  &.primary h3 {
+    color: #003d7a;
   }
 
   p {
@@ -327,7 +331,7 @@ $border-color: #e9ecef;
     gap: 0.5rem;
     padding: 1rem 2rem;
     background: $accent-color;
-    color: $primary-color;
+    color: white;
     text-decoration: none;
     border-radius: 8px;
     font-weight: 700;
@@ -336,7 +340,7 @@ $border-color: #e9ecef;
 
     &:hover {
       transform: translateY(-3px);
-      box-shadow: 0 12px 30px rgba(0, 102, 204, 0.4);
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
     }
   }
 }

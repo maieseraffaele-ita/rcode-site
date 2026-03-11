@@ -131,8 +131,8 @@ $border-color: #e9ecef;
     }
 
     &:hover {
-      color: $accent-color;
-      background-color: rgba(0, 102, 204, 0.05);
+      color: #003d7a;
+      background-color: rgba(0, 102, 204, 0.08);
 
       &::after {
         transform: scaleX(1);
@@ -140,8 +140,8 @@ $border-color: #e9ecef;
     }
 
     &.active {
-      color: $accent-color;
-      background-color: rgba(0, 102, 204, 0.08);
+      color: #001a4d;
+      background-color: rgba(0, 102, 204, 0.12);
 
       &::after {
         transform: scaleX(1);
@@ -290,16 +290,16 @@ $border-color: #e9ecef;
     display: block;
 
     &:hover {
-      background-color: rgba(0, 102, 204, 0.1);
+      background-color: rgba(0, 102, 204, 0.12);
       border-left-color: $accent-color;
-      color: $accent-color;
+      color: #003d7a;
       padding-left: 2.5rem;
     }
 
     &.active {
-      background-color: rgba(0, 102, 204, 0.1);
+      background-color: rgba(0, 102, 204, 0.12);
       border-left-color: $accent-color;
-      color: $accent-color;
+      color: #001a4d;
     }
   }
 

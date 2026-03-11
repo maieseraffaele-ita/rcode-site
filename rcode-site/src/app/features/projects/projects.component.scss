@@ -300,19 +300,20 @@ $danger-color: #ef4444;
   .tech-badge {
     display: inline-block;
     padding: 0.4rem 1rem;
-    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 26, 77, 0.1));
-    border: 1px solid rgba(0, 102, 204, 0.3);
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.15), rgba(0, 26, 77, 0.15));
+    border: 1px solid rgba(0, 102, 204, 0.4);
     border-radius: 20px;
     font-size: 0.85rem;
-    font-weight: 600;
-    color: $accent-color;
+    font-weight: 700;
+    color: #003d7a;
     transition: all 0.3s ease;
     white-space: nowrap;
 
     &:hover {
-      background: linear-gradient(135deg, rgba(0, 102, 204, 0.2), rgba(0, 26, 77, 0.2));
-      border-color: rgba(0, 102, 204, 0.5);
+      background: linear-gradient(135deg, rgba(0, 102, 204, 0.25), rgba(0, 26, 77, 0.25));
+      border-color: rgba(0, 102, 204, 0.6);
       transform: translateY(-2px);
+      color: #001a4d;
     }
   }
 }
@@ -346,9 +347,9 @@ $danger-color: #ef4444;
   }
 
   &:hover {
-    background: darken($accent-color, 10%);
+    background: darken($accent-color, 15%);
     transform: translateY(-2px);
-    box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   }
 
   &.link-github {
