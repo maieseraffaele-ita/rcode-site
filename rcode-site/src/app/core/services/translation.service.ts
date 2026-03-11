@@ -34,6 +34,7 @@ export class TranslationService {
       'nav.about': 'Chi Sono',
       'nav.services': 'Competenze',
       'nav.industries': 'Portfolio',
+      'nav.projects': 'Progetti',
       'nav.careers': 'Opportunità',
       'nav.contact': 'Contatti',
       'nav.request_consultation': 'Richiedi Consulenza',
@@ -120,6 +121,22 @@ export class TranslationService {
       'portfolio.view_project': 'Vedi Progetto',
       'portfolio.tech_stack': 'Tech Stack',
 
+      // Projects Page
+      'projects.hero_title': 'Progetti Realizzati',
+      'projects.hero_subtitle': 'Visualizza tutti i progetti che ho sviluppato: app mobile, web platform, API e molto altro',
+      'projects.featured_projects': 'Progetti In Evidenza',
+      'projects.all_projects': 'Tutti i Progetti',
+      'projects.filter_all': 'Tutti',
+      'projects.status.released': 'Rilasciato',
+      'projects.status.in-development': 'In Sviluppo',
+      'projects.status.archived': 'Archiviato',
+      'projects.no_projects': 'Nessun progetto trovato',
+      'projects.year': 'Anno',
+      'projects.role': 'Ruolo',
+      'projects.cta_title': 'Hai un progetto in mente?',
+      'projects.cta_subtitle': 'Contattami per discutere come posso aiutarti a sviluppare il tuo progetto successivo',
+      'projects.cta_button': 'Contattami',
+
       // Careers/Open to work Page
       'careers.hero_title': 'Disponibile per Collaborazioni',
       'careers.hero_subtitle': 'Cerco nuove sfide e opportunità interessanti',
@@ -203,6 +220,7 @@ export class TranslationService {
       'nav.about': 'About Me',
       'nav.services': 'Skills',
       'nav.industries': 'Portfolio',
+      'nav.projects': 'Projects',
       'nav.careers': 'Opportunities',
       'nav.contact': 'Contact',
       'nav.request_consultation': 'Request Consultation',
@@ -289,6 +307,22 @@ export class TranslationService {
       'portfolio.view_project': 'View Project',
       'portfolio.tech_stack': 'Tech Stack',
 
+      // Projects Page
+      'projects.hero_title': 'Projects Built',
+      'projects.hero_subtitle': 'Browse all the projects I\'ve developed: mobile apps, web platforms, APIs and much more',
+      'projects.featured_projects': 'Featured Projects',
+      'projects.all_projects': 'All Projects',
+      'projects.filter_all': 'All',
+      'projects.status.released': 'Released',
+      'projects.status.in-development': 'In Development',
+      'projects.status.archived': 'Archived',
+      'projects.no_projects': 'No projects found',
+      'projects.year': 'Year',
+      'projects.role': 'Role',
+      'projects.cta_title': 'Have a project in mind?',
+      'projects.cta_subtitle': 'Contact me to discuss how I can help you develop your next project',
+      'projects.cta_button': 'Contact Me',
+
       // Careers/Open to work Page
       'careers.hero_title': 'Available for Collaborations',
       'careers.hero_subtitle': 'Looking for new challenges and interesting opportunities',
@@ -372,6 +406,7 @@ export class TranslationService {
       'nav.about': 'Über mich',
       'nav.services': 'Fähigkeiten',
       'nav.industries': 'Portfolio',
+      'nav.projects': 'Projekte',
       'nav.careers': 'Möglichkeiten',
       'nav.contact': 'Kontakt',
       'nav.request_consultation': 'Beratung anfordern',
@@ -457,6 +492,22 @@ export class TranslationService {
       'portfolio.all_projects': 'Alle Projekte',
       'portfolio.view_project': 'Projekt anzeigen',
       'portfolio.tech_stack': 'Tech Stack',
+
+      // Projects Page
+      'projects.hero_title': 'Erstellte Projekte',
+      'projects.hero_subtitle': 'Sehen Sie sich alle von mir entwickelten Projekte an: mobile Apps, Web-Plattformen, APIs und vieles mehr',
+      'projects.featured_projects': 'Ausgewählte Projekte',
+      'projects.all_projects': 'Alle Projekte',
+      'projects.filter_all': 'Alle',
+      'projects.status.released': 'Veröffentlicht',
+      'projects.status.in-development': 'In Entwicklung',
+      'projects.status.archived': 'Archiviert',
+      'projects.no_projects': 'Keine Projekte gefunden',
+      'projects.year': 'Jahr',
+      'projects.role': 'Rolle',
+      'projects.cta_title': 'Haben Sie ein Projekt im Sinn?',
+      'projects.cta_subtitle': 'Kontaktieren Sie mich, um zu besprechen, wie ich Ihnen bei Ihrem nächsten Projekt helfen kann',
+      'projects.cta_button': 'Kontakt',
 
       // Careers/Open to work Page
       'careers.hero_title': 'Verfügbar für Zusammenarbeit',

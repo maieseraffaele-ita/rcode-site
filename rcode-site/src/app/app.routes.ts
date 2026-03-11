@@ -64,6 +64,13 @@ export const routes: Routes = [
         path: 'cookie-policy',
         loadComponent: () => import('./features/legal/cookie-policy.component').then(m => m.CookiePolicyComponent),
         data: { title: 'Cookie Policy' }
+      },
+
+      // Projects (lazy loaded)
+      {
+        path: 'progetti',
+        loadComponent: () => import('./features/projects/projects.component').then(m => m.ProjectsComponent),
+        data: { title: 'Progetti' }
       }
     ]
   },

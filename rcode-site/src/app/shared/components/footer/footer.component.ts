@@ -53,6 +53,7 @@ import { takeUntil } from 'rxjs/operators';
             <ul class="footer-links">
               <li><a routerLink="/chi-siamo">{{ t('nav.about') }}</a></li>
               <li><a routerLink="/industrie">{{ t('nav.industries') }}</a></li>
+              <li><a routerLink="/progetti">{{ t('nav.projects') }}</a></li>
               <li><a routerLink="/lavora-con-noi">{{ t('nav.careers') }}</a></li>
               <li><a routerLink="/contatti">{{ t('nav.contact') }}</a></li>
               <li><a href="mailto:info@innovatetech.it">Email</a></li>

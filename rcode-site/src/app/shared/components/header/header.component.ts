@@ -36,6 +36,9 @@ import { TranslationService, type Language } from '../../../core/services/transl
           <a routerLink="/industrie" routerLinkActive="active" class="nav-link">
             {{ t('nav.industries') }}
           </a>
+          <a routerLink="/progetti" routerLinkActive="active" class="nav-link">
+            {{ t('nav.projects') }}
+          </a>
           <a routerLink="/contatti" routerLinkActive="active" class="nav-link">
             {{ t('nav.contact') }}
           </a>
@@ -83,6 +86,9 @@ import { TranslationService, type Language } from '../../../core/services/transl
         </a>
         <a routerLink="/industrie" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
           {{ t('nav.industries') }}
+        </a>
+        <a routerLink="/progetti" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
+          {{ t('nav.projects') }}
         </a>
         <a routerLink="/contatti" routerLinkActive="active" class="nav-mobile-link" (click)="closeMobileMenu()">
           {{ t('nav.contact') }}
