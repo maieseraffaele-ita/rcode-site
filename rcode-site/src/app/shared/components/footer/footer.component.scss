@@ -137,18 +137,28 @@ $border-color: #e9ecef;
       &.linkedin {
         &:hover {
           background: linear-gradient(135deg, #0a66c2, #004eaa);
+          color: white;
         }
       }
 
       &.github {
         &:hover {
           background: linear-gradient(135deg, #333, #1a1a1a);
+          color: white;
         }
       }
 
-      &.twitter {
+      &.instagram {
         &:hover {
-          background: linear-gradient(135deg, #000, #1a1a1a);
+          background: linear-gradient(135deg, #e1306c, #c13584);
+          color: white;
+        }
+      }
+
+      &.facebook {
+        &:hover {
+          background: linear-gradient(135deg, #1877f2, #0a66f2);
+          color: white;
         }
       }
     }
