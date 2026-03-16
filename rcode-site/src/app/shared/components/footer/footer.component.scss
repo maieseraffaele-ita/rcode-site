@@ -100,32 +100,56 @@ $border-color: #e9ecef;
 
   .social-links {
     display: flex;
-    gap: 1.25rem;
+    gap: 1.5rem;
     margin-top: 1.5rem;
 
     .social-link {
       display: inline-flex;
       align-items: center;
       justify-content: center;
-      width: 44px;
-      height: 44px;
-      background-color: $primary-color;
+      width: 48px;
+      height: 48px;
+      background: linear-gradient(135deg, $primary-color, #000d26);
       color: white;
       text-decoration: none;
-      border-radius: 10px;
+      border-radius: 12px;
       font-weight: 600;
       font-size: 0.9rem;
       transition: all 0.3s ease;
-      box-shadow: 0 4px 12px rgba(0, 26, 77, 0.12);
+      box-shadow: 0 4px 12px rgba(0, 26, 77, 0.2);
+
+      svg {
+        width: 24px;
+        height: 24px;
+        display: block;
+      }
 
       &:hover {
         background: linear-gradient(135deg, $primary-color, $accent-color);
         transform: translateY(-4px);
-        box-shadow: 0 8px 20px rgba(0, 102, 204, 0.2);
+        box-shadow: 0 8px 20px rgba(0, 102, 204, 0.25);
       }
 
       &:active {
         transform: translateY(-2px);
+      }
+
+      &.linkedin {
+        &:hover {
+          background: linear-gradient(135deg, #0a66c2, #004eaa);
+        }
+      }
+
+      &.github {
+        &:hover {
+          background: linear-gradient(135deg, #333, #1a1a1a);
+        }
+      }
+
+      &.twitter {
+        &:hover {
+          background: linear-gradient(135deg, #000, #1a1a1a);
+        }
       }
     }
   }

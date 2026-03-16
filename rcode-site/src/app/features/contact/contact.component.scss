@@ -214,22 +214,56 @@ $border-color: #e9ecef;
 
 .social-links {
   display: flex;
-  gap: 1rem;
+  gap: 1.5rem;
   flex-wrap: wrap;
 
-  a {
-    display: inline-block;
-    padding: 0.5rem 1rem;
-    background: $light-bg;
+  .social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 52px;
+    height: 52px;
+    background: linear-gradient(135deg, rgba(0, 102, 204, 0.1), rgba(0, 26, 77, 0.08));
     color: $accent-color;
     text-decoration: none;
-    border-radius: 6px;
-    font-weight: 600;
+    border: 2px solid rgba(0, 102, 204, 0.2);
+    border-radius: 12px;
     transition: all 0.3s ease;
 
+    svg {
+      width: 28px;
+      height: 28px;
+      display: block;
+    }
+
     &:hover {
-      background: $accent-color;
+      background: linear-gradient(135deg, $accent-color, #0052a3);
       color: white;
+      border-color: $accent-color;
+      transform: translateY(-4px);
+      box-shadow: 0 8px 20px rgba(0, 102, 204, 0.25);
+    }
+
+    &:active {
+      transform: translateY(-2px);
+    }
+
+    &.linkedin {
+      &:hover {
+        background: linear-gradient(135deg, #0a66c2, #004eaa);
+      }
+    }
+
+    &.github {
+      &:hover {
+        background: linear-gradient(135deg, #333, #1a1a1a);
+      }
+    }
+
+    &.twitter {
+      &:hover {
+        background: linear-gradient(135deg, #000, #1a1a1a);
+      }
     }
   }
 }
