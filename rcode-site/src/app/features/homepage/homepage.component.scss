@@ -485,6 +485,17 @@ $desktop: 1024px;
   background: linear-gradient(135deg, $primary-color, #0d0d1a);
   color: white;
   text-align: center;
+
+  .btn-primary {
+    background: white;
+    color: $primary-color;
+
+    &:hover {
+      background: #f0f0f0;
+      color: $primary-color;
+      box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+    }
+  }
 }
 
 .cta-content {
