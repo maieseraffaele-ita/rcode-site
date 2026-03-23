@@ -4,7 +4,7 @@
   "description": "RCODE Corporate Website - Digital Transformation & Tech Consulting",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve",
+    "start": "CI=true ng serve --poll=2000 --port=4200",
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
